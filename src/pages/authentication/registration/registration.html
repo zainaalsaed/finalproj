@@ -1,0 +1,64 @@
+<!-- Registration Page -->
+
+<!-- Content Options -->
+<ion-content id="registration-v1">
+
+   <!-- Logo -->
+   <div class="logo animated fadeInDown">
+      <img src="https://s3-us-west-2.amazonaws.com/fulcrumy-ionic2/logo.png">
+   </div>
+
+   <!-- Main Body -->
+   <div class="main-body animated zoomIn" padding>
+      <form (ngSubmit)="RegistrationForm()">
+         <ion-list>
+
+            <!-- Username -->
+            <ion-item>
+               <ion-label>
+                  <ion-icon name="md-person"></ion-icon>
+               </ion-label>
+               <ion-input class="ion-ios-locked-outline" type="text" placeholder="{{'REGISTRATION.USERNAME' | translate}}" [(ngModel)]="user.username" name="username"></ion-input>
+            </ion-item>
+
+            <!-- Email -->
+            <ion-item>
+               <ion-label>
+                  <ion-icon name="md-mail"></ion-icon>
+               </ion-label>
+               <ion-input class="ion-ios-locked-outline" type="text" placeholder="{{'REGISTRATION.EMAIL' | translate}}" [(ngModel)]="user.email" name="email"></ion-input>
+            </ion-item>
+
+            <!-- Password -->
+            <ion-item>
+               <ion-label>
+                  <ion-icon name="md-eye"></ion-icon>
+               </ion-label>
+               <ion-input class="ion-ios-locked-outline" type="password" placeholder="{{'REGISTRATION.PASSWORD' | translate}}" [(ngModel)]="user.password" name="password"></ion-input>
+            </ion-item>
+
+            <!-- Confirm Password -->
+            <ion-item>
+               <ion-label>
+                  <ion-icon name="md-eye"></ion-icon>
+               </ion-label>
+               <ion-input class="ion-ios-locked-outline" type="password" placeholder="{{'REGISTRATION.CONFIRM_PASSWORD' | translate}}" [(ngModel)]="user.confirmPassword" name="confirmPassword"></ion-input>
+            </ion-item>
+
+            <!-- Buttons -->
+            <div class="buttons animated fadeInUp">
+               <button ion-button type="submit" color="dark" block>
+                 {{'REGISTRATION.CREATE_ACCOUNT' | translate}}
+                </button>
+            </div>
+
+         </ion-list>
+      </form>
+
+      <!-- Skip Button -->
+      <button ion-button color="dark" block outline (click)="skip()">
+        {{'REGISTRATION.SKIP' | translate}}
+      </button>
+      
+   </div>
+</ion-content>

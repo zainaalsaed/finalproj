@@ -1,0 +1,22 @@
+<!-- Side Menu -->
+<ion-menu [content]="content" type="overlay">
+    <!-- Side menu header option -->
+     <ion-header no-border>
+        <ion-toolbar text-center padding-top>
+           <ion-title><img src="https://s3-us-west-2.amazonaws.com/fulcrumy-ionic2/logo.png" alt="Logo"></ion-title>
+        </ion-toolbar>
+     </ion-header>
+     
+     <!-- Side menu content option -->
+     <ion-content>
+        <ion-list no-lines>
+           <ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">
+           <ion-icon ion-text color="secondary" [name]="p.leftIcon" item-left></ion-icon>
+           <span ion-text color="white">{{p.title | translate}}</span>
+           </ion-item>
+        </ion-list>
+     </ion-content>
+  </ion-menu>
+  <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+  <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+  

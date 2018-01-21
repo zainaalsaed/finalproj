@@ -1,0 +1,17 @@
+#cart-v1 {
+  .item-ios ion-thumbnail img {
+    width: 80px;
+    height: 80px;
+  }
+  ion-icon {
+    font-size: 1.6em;
+    font-weight: bold;
+  }
+  .empty-cart {
+    text-align: center;
+    padding-top: 20%;
+    img {
+      width: 200px;
+    }
+  }
+}

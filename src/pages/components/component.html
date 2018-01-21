@@ -1,0 +1,66 @@
+<!-- Registration Page -->
+
+<!-- Header Options -->
+<ion-header>
+   <ion-navbar color="secondary" hideBackButton>
+      <button ion-button menuToggle>
+         <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>{{'COMPONENTS.TITLE' | translate}}</ion-title>
+   </ion-navbar>
+</ion-header>
+<!-- Content Options -->
+<ion-content id="component-v1">
+   <ion-grid no-padding>
+      <ion-row>
+         <ion-col col-6 class="animated zoomIn col1" (click)="gotoTargetComponent('Profile')">
+            <ion-icon name="person"></ion-icon>
+            <p ion-text color="secondary">{{'COMPONENTS.PROFILE' | translate}}</p>
+         </ion-col>
+         <ion-col col-6 class="animated zoomIn col2" (click)="gotoTargetComponent('Calendar')">
+            <ion-icon name="calendar"></ion-icon>
+            <p ion-text color="secondary">{{'COMPONENTS.CALENDAR' | translate}}</p>
+         </ion-col>
+      </ion-row>
+      <ion-row>
+         <ion-col col-6 class="animated zoomIn col2" (click)="gotoTargetComponent('Map')">
+            <ion-icon name="md-pin"></ion-icon>
+            <p ion-text color="secondary">{{'COMPONENTS.MAP' | translate}}</p>
+         </ion-col>
+         <ion-col col-6 class="animated zoomIn col1" (click)="gotoTargetComponent('Chart')">
+            <ion-icon name="stats"></ion-icon>
+            <p ion-text color="secondary">{{'COMPONENTS.CHART' | translate}}</p>
+         </ion-col>
+      </ion-row>
+      <ion-row>
+         <ion-col col-6 class="animated zoomIn col1" (click)="gotoTargetComponent('Ecommerce')">
+            <ion-icon name="cart"></ion-icon>
+            <p ion-text color="secondary">{{'COMPONENTS.ECOMMERCE' | translate}}</p>
+         </ion-col>
+         <ion-col col-6 class="animated zoomIn col2" (click)="gotoTargetComponent('NewsFeed')">
+            <ion-icon name="paper"></ion-icon>
+            <p ion-text color="secondary">{{'COMPONENTS.NEWS_FEED' | translate}}</p>
+         </ion-col>
+      </ion-row>
+      <ion-row>
+         <ion-col col-6 class="animated zoomIn col2" (click)="gotoTargetComponent('Chat')">
+            <ion-icon name="chatbubbles"></ion-icon>
+            <p ion-text color="secondary">{{'COMPONENTS.CHAT' | translate}}</p>
+         </ion-col>
+         <ion-col col-6 class="animated zoomIn col1" (click)="gotoTargetComponent('LatestNews')">
+            <ion-icon name="paper-plane"></ion-icon>
+            <p ion-text color="secondary">{{'COMPONENTS.LATEST_NEWS' | translate}}</p>
+         </ion-col>
+      </ion-row>
+      <ion-row>
+         <ion-col col-6 class="animated zoomIn col1" (click)="gotoTargetComponent('AboutUs')">
+            <ion-icon name="information-circle"></ion-icon>
+            <p ion-text color="secondary">{{'COMPONENTS.ABOUTUS' | translate}}</p>
+         </ion-col>
+         <ion-col col-6 class="animated zoomIn col2" (click)="gotoTargetComponent('ContactUs')">
+            <ion-icon name="mail"></ion-icon>
+            <p ion-text color="secondary">{{'COMPONENTS.CONTACTUS' | translate}}</p>
+         </ion-col>
+      </ion-row>
+   </ion-grid>
+</ion-content>

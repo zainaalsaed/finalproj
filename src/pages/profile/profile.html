@@ -1,0 +1,93 @@
+<!-- Main Profile Page -->
+<!-- Profile Header -->
+<ion-header>
+   <ion-navbar color="navbarColor" hideBackButton>
+      <button ion-button menuToggle>
+         <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>{{'PROFILE.TITLE' | translate}}</ion-title>
+      <ion-buttons end>
+         <button ion-button icon-only (click)="gotoSearch()">
+            <ion-icon name="search"></ion-icon>
+         </button>
+      </ion-buttons>
+   </ion-navbar>
+</ion-header>
+<!-- Profile Contents -->
+<ion-content id="profile-v1">
+   <!-- Profile Top Fab -->
+   <ion-fab bottom right>
+      <button ion-fab mini color="secondary">
+         <ion-icon name="arrow-dropup"></ion-icon>
+      </button>
+      <ion-fab-list side="top">
+         <button ion-fab>
+            <ion-icon name="logo-facebook"></ion-icon>
+         </button>
+         <button ion-fab>
+            <ion-icon name="logo-twitter"></ion-icon>
+         </button>
+         <button ion-fab>
+            <ion-icon name="logo-vimeo"></ion-icon>
+         </button>
+         <button ion-fab>
+            <ion-icon name="logo-googleplus"></ion-icon>
+         </button>
+      </ion-fab-list>
+   </ion-fab>
+   <!-- Profile Top body of user photo, name and title -->
+   <ion-slides padding id="slider" pager="true" zoom="true" loop autoplay="5000" style="direction:ltr">
+      <ion-slide>
+         <ion-grid>
+            <ion-row>
+               <ion-col width-100>
+                  <div class="profile-part1" text-center>
+                     <img src="https://s3-us-west-2.amazonaws.com/fulcrumy-ionic2/avatar.png" alt="Avatar" imageViewer>
+                     <p class="name">{{'PROFILE.NAME' | translate}}</p>
+                     <p class="title">{{'PROFILE.DESIGNATION' | translate}}</p>
+                  </div>
+               </ion-col>
+            </ion-row>
+         </ion-grid>
+      </ion-slide>
+      <ion-slide class="profile-part2">
+         <p class="profile-details">{{'PROFILE.DETAILS' | translate}}</p>
+      </ion-slide>
+   </ion-slides>
+   <!-- Profile second body of user timeline, aboutme, frields list and gallery -->
+   <!-- Segment buttons with icons -->
+   <ion-segment [(ngModel)]="segment" color="secondary">
+   <ion-segment-button value="timeline">
+      {{'PROFILE.TIMELINE' | translate}}
+   </ion-segment-button>
+   <ion-segment-button value="aboutme">
+      {{'PROFILE.ABOUTME' | translate}}
+   </ion-segment-button>
+   <ion-segment-button value="friends">
+      {{'PROFILE.FRIENDS' | translate}}
+   </ion-segment-button>
+   <ion-segment-button value="gallery">
+      {{'PROFILE.GALLERY' | translate}}
+   </ion-segment-button>
+   </ion-segment>
+   <div [ngSwitch]="segment">
+      <!-- timeline -->
+      <ion-list *ngSwitchCase="'timeline'" class="animated fadeInLeft">
+         <timeline></timeline>
+      </ion-list>
+      <!-- Aboutme -->
+      <ion-list *ngSwitchCase="'aboutme'" class="animated fadeInRight">
+         <div class="profile-segment">
+            <aboutme></aboutme>
+         </div>
+      </ion-list>
+      <!-- Friend List -->
+      <ion-list *ngSwitchCase="'friends'" padding class="animated fadeInLeft">
+         <friends></friends>
+      </ion-list>
+      <!-- Gallery -->
+      <ion-grid *ngSwitchCase="'gallery'" class="animated fadeInUp">
+         <gallery></gallery>
+      </ion-grid>
+   </div>
+</ion-content>

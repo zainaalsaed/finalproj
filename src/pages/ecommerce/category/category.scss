@@ -1,0 +1,19 @@
+.category-v1 {
+  height: 100%;
+  ion-row {
+    height: 100%;
+    ion-col {
+      height: 19%;
+      text-align: center;
+      img {
+        height: 110px;
+        width: 110px;
+        border-radius: 50%;
+        border: 1px solid $menu-toolbar;
+      }
+      p {
+        line-height: 0;
+      }
+    }
+  }
+}

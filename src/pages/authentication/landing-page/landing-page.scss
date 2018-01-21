@@ -1,0 +1,31 @@
+
+#landing-v1 {
+    /* Background style */
+    .background {
+        
+        height: 100%;
+        background: linear-gradient(-60deg, $themeColor1);
+        background-size: cover;
+
+        /* Logo style */
+        .logo {
+            height: 50%;
+            padding-top: 10%;
+            text-align: center;
+            img {
+                width: 100px;
+                border-radius: 50%;
+            }
+        }
+        /* Buttons style */
+        // .buttons {
+        //     height: 50%;
+        //     margin-left: 10px;
+        //     padding-top: 10%;
+        //     margin-right: 10px;
+        //     button {
+        //         font-weight: bold;
+        //     }
+        // }
+    }
+}

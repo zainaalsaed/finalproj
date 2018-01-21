@@ -1,0 +1,80 @@
+<!-- Settings Page -->
+
+<!-- Header Option -->
+<ion-header>
+   <ion-navbar color="secondary" hideBackButton>
+      <button ion-button menuToggle>
+         <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>{{'SETTINGS.TITLE' | translate}}</ion-title>
+   </ion-navbar>
+</ion-header>
+
+<!-- Content Option -->
+<ion-content id="settings-v1">
+
+  <!-- Language Setting Option -->
+   <ion-list radio-group>
+      <ion-list-header>
+         {{'SETTINGS.LANGUAGE' | translate}}
+      </ion-list-header>
+
+      <ion-item *ngFor="let language of languages; let i=index">
+          <ion-label>{{'LANGUAGES.' + i + '.VALUE' | translate}}</ion-label>
+          <ion-radio
+            [checked]="language.ID == 'en'" value="{{'LANGUAGES.' + i + '.VALUE' | translate}}"
+            (click)="changeLanguage(language.ID)">
+          </ion-radio>
+      </ion-item>
+   </ion-list>
+
+   <!-- Notification Setting Option -->
+   <ion-list>
+      <ion-list-header>
+         {{'SETTINGS.NOTIFICATION' | translate}}
+      </ion-list-header>
+      <ion-item>
+         <ion-label> {{'SETTINGS.PUSH_NOTIFICATION' | translate}}</ion-label>
+         <ion-toggle checked="true"></ion-toggle>
+      </ion-item>
+      <ion-item>
+         <ion-label> {{'SETTINGS.MESSAGE_PREVIEW' | translate}}</ion-label>
+         <ion-toggle checked="false"></ion-toggle>
+      </ion-item>
+      <ion-item>
+         <ion-label> {{'SETTINGS.NEW_MESSAGE_POPUP' | translate}}</ion-label>
+         <ion-toggle checked="true"></ion-toggle>
+      </ion-item>
+   </ion-list>
+
+   <!-- Adjust Display Option -->
+   <ion-list>
+      <ion-list-header>
+         {{'SETTINGS.ADJUST_DISPLAY' | translate}}
+      </ion-list-header>
+      <ion-item>
+         <ion-range [(ngModel)]="brightness">
+         <ion-icon range-left small name="sunny"></ion-icon>
+         <ion-icon range-right name="sunny"></ion-icon>
+         </ion-range>
+      </ion-item>
+      <ion-item>
+         <ion-range min="-200" max="200" pin="true" [(ngModel)]="contrast" color="secondary">
+         <ion-icon range-left small name="contrast"></ion-icon>
+         <ion-icon range-right name="contrast"></ion-icon>
+         </ion-range>
+      </ion-item>
+      <ion-item>
+         <ion-range dualKnobs="true" pin="true" [(ngModel)]="structure" color="dark">
+         <ion-icon range-left small name="brush"></ion-icon>
+         <ion-icon range-right name="brush"></ion-icon>
+         </ion-range>
+      </ion-item>
+      <ion-item>
+         <ion-range min="1000" max="2000" step="100" snaps="true" [(ngModel)]="warmth" color="danger">
+         <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+         <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+         </ion-range>
+      </ion-item>
+   </ion-list>
+</ion-content>

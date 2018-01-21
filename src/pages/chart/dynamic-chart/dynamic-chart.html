@@ -1,0 +1,27 @@
+<!-- Line Chart -->
+
+<!-- See more details about the chart -  http://valor-software.com/ng2-charts/ -->
+
+<ion-content>
+   <ion-card>
+      <ion-card-header>
+         <button ion-button color="secondary" block (click)="randomizeType()">Toogle</button>
+      </ion-card-header>
+      <ion-card-content>
+         <!-- Add card content here! -->
+         <canvas baseChart
+         [data]="lineChartData"
+         [labels]="lineChartLabels"
+         [options]="lineChartOptions"
+         [chartType]="lineChartType"
+         (chartHover)="chartHovered($event)"
+         (chartClick)="chartClicked($event)"></canvas>
+         <canvas baseChart
+         [data]="pieChartData"
+         [labels]="pieChartLabels"
+         [chartType]="pieChartType"
+         (chartHover)="chartHovered($event)"
+         (chartClick)="chartClicked($event)"></canvas>
+      </ion-card-content>
+   </ion-card>
+</ion-content>

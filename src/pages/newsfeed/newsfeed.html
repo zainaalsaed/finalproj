@@ -1,0 +1,57 @@
+<ion-header>
+   <ion-navbar color="secondary" hideBackButton>
+      <button ion-button menuToggle>
+         <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>NewsFeed</ion-title>
+   </ion-navbar>
+</ion-header>
+<ion-content id="newsfeed-v1">
+   <!-- Status Options -->
+   <ion-list>
+      <ion-item>
+         <ion-avatar item-left>
+            <img src="https://s3-us-west-2.amazonaws.com/fulcrumy-ionic2/avatar.png">
+         </ion-avatar>
+         <ion-textarea
+         placeholder='Whats on your mind'
+         [(ngModel)]="status"></ion-textarea>
+      </ion-item>
+      <ion-item>
+         <button ion-button color="secondary" (click)="openStatusBox()">Post</button>
+      </ion-item>
+   </ion-list>
+   <!-- All posts card (Loaded from profile timeline) -->
+   <ion-card *ngFor="let post of allPosts">
+      <ion-item>
+         <ion-avatar item-left>
+            <img [src]="post.profilePhoto">
+         </ion-avatar>
+         <h2>{{post.name}}</h2>
+         <p>{{post.publishedDate}}</p>
+      </ion-item>
+      <img [src]="post.statusPhoto" imageViewer>
+      <ion-card-content>
+         <p>{{post.status}}</p>
+      </ion-card-content>
+      <ion-row>
+         <ion-col>
+            <button ion-button icon-left clear small>
+               <ion-icon name="thumbs-up"></ion-icon>
+               <div>{{post.totalLike}} Likes</div>
+            </button>
+         </ion-col>
+         <ion-col>
+            <button ion-button icon-left clear small>
+               <ion-icon name="text"></ion-icon>
+               <div>{{post.totalComment}} Comments</div>
+            </button>
+         </ion-col>
+         <ion-col center text-center>
+            <ion-note>
+               {{post.leftHour}}h ago
+            </ion-note>
+         </ion-col>
+      </ion-row>
+   </ion-card>
+</ion-content>

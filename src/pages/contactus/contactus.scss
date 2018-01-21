@@ -1,0 +1,45 @@
+#contactus-v1 {
+    text-align: center;
+    padding-top: 5%;
+	.contact-header {
+		.line1 {
+			color: tomato;
+		    font-size: 22px;
+		    font-weight: 600;
+		}
+		.address {
+			p {
+                font-size: 14px;
+                line-height: 0px;
+			}
+            .unstyled {
+                list-style: none;
+            }
+		}
+	}
+    .contact-form {
+        p {
+            font-size: 20px;
+        }
+        form {
+            ion-list {
+                margin-bottom: 0px;
+                .item-input {
+                    ion-label {
+                        color: $menu-toolbar;
+                        margin-left: 10px;
+                    }
+                }
+                ion-item {
+                    padding-left: 0;
+                    .text-input-ios {
+                        padding: 12px;
+                    }
+                }
+                .buttons {
+                    margin-top: 5%;
+                }
+            }
+        }
+    }
+}

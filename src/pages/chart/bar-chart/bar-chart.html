@@ -1,0 +1,23 @@
+<!-- Bar Chart -->
+
+<!-- See more details about the chart -  http://valor-software.com/ng2-charts/ -->
+
+<ion-content>
+   <ion-card>
+      <ion-card-header>
+         <p text-center>Bar Chart</p>
+      </ion-card-header>
+      <ion-card-content>
+         <!-- Add card content here! -->
+         <canvas baseChart
+         [datasets]="barChartData"
+         [labels]="barChartLabels"
+         [options]="barChartOptions"
+         [legend]="barChartLegend"
+         [chartType]="barChartType"
+         (chartHover)="chartHovered($event)"
+         (chartClick)="chartClicked($event)"></canvas>
+      </ion-card-content>
+   </ion-card>
+   <button ion-button color="secondary" block (click)="randomize()">Update</button>
+</ion-content>

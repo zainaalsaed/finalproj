@@ -1,0 +1,53 @@
+<!-- Login Page -->
+
+<!-- Content Options -->
+<ion-content id="login-v1">
+
+   <!-- Logo -->
+   <div class="logo animated fadeInDown">
+      <img src="https://s3-us-west-2.amazonaws.com/fulcrumy-ionic2/logo.png">
+   </div>
+
+   <!-- Main Body -->
+   <div class="main-body animated zoomIn" padding>
+      <form (ngSubmit)="loginForm()">
+         <ion-list>
+
+            <!-- Username -->
+            <ion-item>
+               <ion-label>
+                  <ion-icon name="md-mail"></ion-icon>
+               </ion-label>
+               <ion-input class="ion-ios-locked-outline" type="email" placeholder="{{'LOGIN.EMAIL' | translate}}" [(ngModel)]="user.email" name="email"></ion-input>
+            </ion-item>
+
+            <!-- Password -->
+            <ion-item>
+               <ion-label>
+                  <ion-icon name="md-eye"></ion-icon>
+               </ion-label>
+               <ion-input class="ion-ios-locked-outline" type="password" placeholder="{{'LOGIN.PASSWORD' | translate}}" [(ngModel)]="user.password" name="password"></ion-input>
+            </ion-item>
+         </ion-list>
+
+         <!-- Login Button -->
+         <div class="buttons animated fadeInUp">
+            <button ion-button type="submit" color="dark" block>
+              {{'LOGIN.LOGIN' | translate}}
+            </button>
+         </div>
+
+      </form>
+
+      <!-- Skip button-->
+      <button ion-button color="dark" block outline (click)="skip()">
+        {{'LOGIN.SKIP' | translate}}
+      </button>
+
+      <!-- Forget Password Button -->
+      <button ion-button outline color="dark" (click)="showForgetPasswordPopup()">
+        {{'LOGIN.FORGET_PASSWORD' | translate}}
+      </button>
+
+   </div>
+</ion-content>

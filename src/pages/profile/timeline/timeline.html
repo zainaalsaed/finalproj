@@ -1,0 +1,32 @@
+<ion-card *ngFor="let post of allPosts">
+   <ion-item>
+      <ion-avatar item-left>
+         <img [src]="post.profilePhoto">
+      </ion-avatar>
+      <h2>{{post.name}}</h2>
+      <p>{{post.publishedDate}}</p>
+   </ion-item>
+   <img [src]="post.statusPhoto" imageViewer>
+   <ion-card-content>
+      <p>{{post.status}}</p>
+   </ion-card-content>
+   <ion-row>
+      <ion-col>
+         <button ion-button icon-left clear small>
+            <ion-icon name="thumbs-up"></ion-icon>
+            <div>{{post.totalLike}} Likes</div>
+         </button>
+      </ion-col>
+      <ion-col>
+         <button ion-button icon-left clear small>
+            <ion-icon name="text"></ion-icon>
+            <div>{{post.totalComment}} Comments</div>
+         </button>
+      </ion-col>
+      <ion-col center text-center>
+         <ion-note>
+            {{post.leftHour}}h ago
+         </ion-note>
+      </ion-col>
+   </ion-row>
+</ion-card>

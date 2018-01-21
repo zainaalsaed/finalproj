@@ -1,0 +1,72 @@
+<!-- ContactUs Page -->
+
+<!-- Header Options -->
+<ion-header>
+   <ion-navbar color="tomato" hideBackButton>
+      <button ion-button menuToggle>
+         <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>{{'CONTACT_US.TITLE' | translate}}</ion-title>
+   </ion-navbar>
+</ion-header>
+
+<!-- Content Options -->
+<ion-content id="contactus-v1">
+   <div class="contact-header">
+      <p class="line1">{{'CONTACT_US.GET_IN_TOUCH' | translate}}</p>
+      <div class="address">
+         <p>{{'CONTACT_US.ADDRESS' | translate}}</p>
+         <div class="unstyled">
+            <p>
+               <ion-icon name="home"></ion-icon>
+               12 Streat, City 11298 New York
+            </p>
+            <p>
+               <ion-icon name="mail"></ion-icon>
+               info@example.com
+            </p>
+            <p>
+               <ion-icon name="call"></ion-icon>
+               1(222) 5x86 x97x
+            </p>
+            <p>
+               <ion-icon name="link"></ion-icon>
+               http://www.example.com/
+            </p>
+         </div>
+      </div>
+   </div>
+   <!-- CONTACT FORM -->
+   <div class="contact-form animated zoomIn">
+      <p>{{'CONTACT_US.CONTACT_FORM' | translate}}</p>
+      <form>
+         <ion-list>
+            <!-- Username -->
+            <ion-item>
+               <ion-label>
+                  <ion-icon name="md-person"></ion-icon>
+               </ion-label>
+               <ion-input class="ion-ios-locked-outline" type="text" placeholder="{{'CONTACT_US.NAME' | translate}}"></ion-input>
+            </ion-item>
+            <!-- Email -->
+            <ion-item>
+               <ion-label>
+                  <ion-icon name="md-mail"></ion-icon>
+               </ion-label>
+               <ion-input class="ion-ios-locked-outline" type="text" placeholder="{{'CONTACT_US.EMAIL' | translate}}"></ion-input>
+            </ion-item>
+            <!-- Messages -->
+            <ion-item>
+               <ion-label>
+                  <ion-icon name="md-mail"></ion-icon>
+               </ion-label>
+               <ion-input class="ion-ios-locked-outline" type="text" placeholder="{{'CONTACT_US.YOUR_MESSAGE' | translate}}"></ion-input>
+            </ion-item>
+            <!-- Buttons -->
+            <div class="buttons animated fadeInUp">
+               <button ion-button type="submit" color="secondary" block>{{'CONTACT_US.SEND_MESSAGE' | translate}}</button>
+            </div>
+         </ion-list>
+      </form>
+   </div>
+</ion-content>

@@ -1,0 +1,86 @@
+#aboutus-v1 {
+  // Ion Card
+  ion-card {
+    position: relative;
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.0);
+    .card-title {
+      position: absolute;
+      top: 36%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+      
+    }
+
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      color: #fff;
+    }
+
+    ion-card-header {
+      ion-icon {
+        font-size: 2.2em;
+        color: yellowgreen;
+      }
+    }
+    ion-slides {
+      height: 300px;
+      text-align: center;
+      img {
+        height: 80px;
+        border-radius: 50%;
+        width: 80px;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+  // Grid Style
+  ion-grid {
+    height: 300px;
+    ion-row {
+      height: 50%;
+      
+      .col1 {
+        background: $menu-toolbar;
+        text-align: center;
+        padding-top: 10%;
+        p {
+          line-height: 0;
+          color: #000;
+          font-size: 14px;
+          font-weight: bold;
+        }
+        ion-icon {
+          color: #000;
+          font-size: 2.5em;
+          line-height: 0;
+        }
+      }
+      .col2 {
+        background: #a3e03d;
+        text-align: center;
+        padding-top: 10%;
+        p {
+          line-height: 0;
+          font-size: 14px;
+          font-weight: bold;
+          color: #000;
+        }
+        ion-icon {
+          color: #000;
+          font-size: 2.5em;
+          line-height: 0;
+        }
+      }
+    }
+  }
+}

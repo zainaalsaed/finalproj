@@ -1,0 +1,10 @@
+.gallery-grid {
+  ion-col {
+    flex: 0 0 50%;
+    text-align: center;
+    img {
+      height: 100px;
+      width: 100%;
+    }
+  }
+}

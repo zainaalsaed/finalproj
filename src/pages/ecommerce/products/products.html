@@ -1,0 +1,78 @@
+<!-- Ecommerce Product Page -->
+
+<!-- Header -->
+<ion-header>
+   <ion-navbar class="ecommerce-header" color="white">
+      <button ion-button menuToggle>
+         <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>{{'ECOMMERCE.TITLE' | translate}}</ion-title>
+      <!-- Cart Button -->
+      <ion-buttons end>
+         <button ion-button icon-only color="secondary" item-right icon-left (click)="openModal()">
+            <ion-icon name="cart"></ion-icon>
+            {{cartItems}}
+         </button>
+      </ion-buttons>
+   </ion-navbar>
+</ion-header>
+
+<!-- Content -->
+<ion-content id="products-v1">
+
+   <h1 class="title">Products</h1>
+   
+   <!-- Slider -->
+   <ion-slides padding id="slider" pager="true" zoom="true" loop autoplay="5000" style="direction:ltr">
+      <ion-slide>
+         <img class="animated flipInX" src="https://s3-us-west-2.amazonaws.com/fulcrumy-ionic2/ecommerce/s3.jpg" />
+      </ion-slide>
+      <ion-slide>
+         <img src="https://s3-us-west-2.amazonaws.com/fulcrumy-ionic2/ecommerce/s2.jpg" />
+      </ion-slide>
+      <ion-slide>
+         <img src="https://s3-us-west-2.amazonaws.com/fulcrumy-ionic2/ecommerce/s1.jpg" />
+      </ion-slide>
+   </ion-slides>
+   
+   <!-- Load all products by category wise -->
+   <ion-card class="animated fadeInUp" *ngFor="let product of allProducts">
+      <div *ngIf="categoryId == product.categoryId" (click)="productDetails(product.id, product.categoryId)">
+      <ion-card-header>
+         <span ion-text color="secondary">{{product.name}}</span>
+         <ion-badge item-right color="tomato">{{product.availability}}</ion-badge>
+      </ion-card-header>
+      <img [src]="product.image" [alt]="product.name">
+      <ion-card-content>
+         <ion-card-title ion-text color="tomato">
+            ${{product.price}}
+         </ion-card-title>
+         <p>
+            {{product.description}}
+         </p>
+      </ion-card-content>
+      </div>
+   </ion-card>
+   
+   <!-- Fabs - for share product-->
+   <ion-fab right bottom>
+      <button ion-fab color="secondary">
+         <ion-icon name="arrow-dropup"></ion-icon>
+      </button>
+      <ion-fab-list side="top">
+         <button ion-fab>
+            <ion-icon name="logo-facebook"></ion-icon>
+         </button>
+         <button ion-fab>
+            <ion-icon name="logo-twitter"></ion-icon>
+         </button>
+         <button ion-fab>
+            <ion-icon name="logo-vimeo"></ion-icon>
+         </button>
+         <button ion-fab>
+            <ion-icon name="logo-googleplus"></ion-icon>
+         </button>
+      </ion-fab-list>
+   </ion-fab>
+
+</ion-content>

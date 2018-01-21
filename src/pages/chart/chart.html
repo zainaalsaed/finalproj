@@ -1,0 +1,30 @@
+<!-- Chart Page -->
+
+<!--
+  - Chart apply from - http://valor-software.com/ng2-charts/
+  - Six types of chart applied separately with individual component
+  - This file contains six tabs and every tab contain single chart component
+-->
+
+<!-- Header part -->
+<ion-header>
+   <ion-navbar color="white" hideBackButton>
+      <button ion-button menuToggle>
+         <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>{{'CHART.TITLE' | translate}}</ion-title>
+   </ion-navbar>
+</ion-header>
+
+<!-- Body part -->
+<ion-content id="chart-v1">
+    <!-- Tabs for (Bar Chart, Doughnut Chart, pie Chart, Polar Area Chart, Dynamic Chart, Radar Chart) -->
+   <ion-tabs color="secondary">
+      <ion-tab tabTitle="{{'CHART.BAR' | translate}}" [root]="barChart"></ion-tab>
+      <ion-tab tabTitle="{{'CHART.DOUGHNUT' | translate}}" [root]="doughnutChart"></ion-tab>
+      <ion-tab tabTitle="{{'CHART.PIE' | translate}}" [root]="pieChart"></ion-tab>
+      <ion-tab tabTitle="{{'CHART.POLAR' | translate}}" [root]="polarArea"></ion-tab>
+      <ion-tab tabTitle="{{'CHART.DYNAMIC' | translate}}" [root]="dynamic"></ion-tab>
+      <ion-tab tabTitle="{{'CHART.RADAR' | translate}}" [root]="radar"></ion-tab>
+   </ion-tabs>
+</ion-content>

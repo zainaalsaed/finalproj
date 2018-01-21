@@ -1,0 +1,7 @@
+<div class="gallery-grid">
+  <ion-row wrap>
+    <ion-col col-6 *ngFor="let fileUri of images" class='cell-{{fileUri.id}}'>
+      <img [src]="fileUri.image" [alt]="fileUri.id" imageViewer>
+    </ion-col>
+  </ion-row>
+</div>

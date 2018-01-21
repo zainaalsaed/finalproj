@@ -1,0 +1,109 @@
+<!-- Product Details Page -->
+
+<!-- Header -->
+<ion-header>
+   <ion-navbar class="ecommerce-header" color="white">
+      <button ion-button menuToggle>
+         <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>{{'ECOMMERCE.TITLE' | translate}}</ion-title>
+      <!-- Cart Button-->
+      <ion-buttons end>
+         <button ion-button icon-only color="secondary" item-right icon-left (click)="openModal()">
+            <ion-icon name="cart"></ion-icon>
+            {{cartItems}}
+         </button>
+      </ion-buttons>
+   </ion-navbar>
+</ion-header>
+
+<!-- Content -->
+<ion-content id="product-details">
+
+   <h1 class="title">Product Details</h1>
+   
+   <!-- Product Details Card -->
+   <ion-card>
+      <img [src]="productDetails.image" [alt]="productDetails.name" imageViewer>
+      <ion-card-content>
+         <ion-card-title>
+            <ion-item>
+               {{productDetails.name}}
+               <ion-badge color="secondary" item-right>${{productDetails.price}}</ion-badge>
+            </ion-item>
+            <p>{{productDetails.description}}</p>
+         </ion-card-title>
+      </ion-card-content>
+   </ion-card>
+   
+   <!-- Quantity option-->
+   <div class="quantity">
+      <h4 class="quantity-h4">Quantity</h4>
+      <ion-list class="quantity-body" padding>
+
+          <!-- Remove quantity button -->
+         <button ion-button class='qtyminus' color="secondary" (click)="minusQuantity()" >
+            <ion-icon name="remove"></ion-icon>
+         </button>
+
+         <!-- Input field of quantity -->
+         <ion-input type='number' name='quantity' text-center value="1" class='qty' [(ngModel)]="quantity" ></ion-input>
+         
+         <!-- Add quantity button -->
+         <button ion-button value='+' class='qtyplus' color="secondary" (click)="addQuantity()" >
+            <ion-icon name="add"></ion-icon>
+         </button>
+      </ion-list>
+   </div>
+   
+   <!-- Add to Cart Button -->
+   <div padding class="cart-btn">
+      <button  ion-button full color="tomato" (click)="addToCart(productId, quantity)">Add to Cart</button>
+   </div>
+   
+   <!-- Product Extra details option -->
+   <ion-list padding>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+         when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+         It has survived not only five centuries, but also the leap into electronic typesetting,
+         remaining essentially unchanged.
+      </p>
+   </ion-list>
+   
+   <!-- Fabs - for share product option -->
+   <ion-fab right bottom>
+      <button ion-fab color="secondary">
+         <ion-icon name="arrow-dropup"></ion-icon>
+      </button>
+      <ion-fab-list side="top">
+         <button ion-fab>
+            <ion-icon name="logo-facebook"></ion-icon>
+         </button>
+         <button ion-fab>
+            <ion-icon name="logo-twitter"></ion-icon>
+         </button>
+         <button ion-fab>
+            <ion-icon name="logo-vimeo"></ion-icon>
+         </button>
+         <button ion-fab>
+            <ion-icon name="logo-googleplus"></ion-icon>
+         </button>
+      </ion-fab-list>
+   </ion-fab>
+   
+   <!-- Related Products -->
+   <ion-grid class="related-product" no-padding *ngIf="relatedProducts.length">
+      <h1>Related Products</h1>
+      <ion-row wrap no-padding>
+         <ion-col no-padding col-6 *ngFor="let product of relatedProducts; let i=index" class='cell-{{product.id}}'>
+            <div *ngIf="i<4" (click)="gotoRelatedProductPage(product.id)">
+               <img class="animated bounceInRight" [src]="product.image">
+               <p class="animated bounceInLeft" ion-text color="secondary">{{product.name}}</p>
+               <p ion-text color="tomato">${{product.price}}</p>
+            </div>
+         </ion-col>
+      </ion-row>
+   </ion-grid>
+
+</ion-content>

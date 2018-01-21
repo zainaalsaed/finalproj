@@ -1,0 +1,23 @@
+#friends-v1 {
+  height: 100%;
+  ion-row {
+    height: 100%;
+    
+    ion-col {
+      height: 19%;
+      text-align: center;
+      padding: 0px;
+      ion-card {
+        ion-row {
+          border-top: 1px solid #bdbdbd;
+        }
+      }
+      img {
+        height: 120px;
+      }
+      p {
+        line-height: 0;
+      }
+    }
+  }
+}

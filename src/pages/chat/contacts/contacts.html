@@ -1,0 +1,35 @@
+<!-- Contacts Page -->
+
+<!--
+  - This page represent all the contact list of user phone
+-->
+
+<!-- Header part -->
+<ion-header>
+   <ion-navbar color="navbarColor">
+      <button ion-button menuToggle>
+         <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Contact</ion-title>
+   </ion-navbar>
+</ion-header>
+<!-- End Header -->
+
+<!-- Content Body-->
+<ion-content id="contact-v1">
+    <ion-list>
+        <!-- Run loop depend on all contact list -->
+        <ion-item-sliding *ngFor="let contact of allContacts">
+            <ion-item class="bloc-contact" (click)="gotoChatBox()">
+                <!-- Display name of contact -->
+                <h2>{{contact.displayName}}</h2>
+                <!-- Run loop depend on contact phone number -->
+                <div *ngFor="let phone of contact.phoneNumbers" item-right>
+                    <!-- Display contact phone number -->
+                <ion-badge teal *ngIf="phone.type == 'mobile'">{{phone.value}}</ion-badge>
+                </div>
+            </ion-item>
+        </ion-item-sliding>
+    </ion-list>
+</ion-content>
+<!-- End Body-->

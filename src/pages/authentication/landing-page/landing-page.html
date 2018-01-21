@@ -1,0 +1,25 @@
+<!-- Langding Page  -->
+
+<!-- Content Options -->
+<ion-content id="landing-v1">
+   <div class="background">
+      <!-- Logo -->
+      <div class="logo animated fadeInDown">
+         <img src="assets/imgs/logo.png">
+      </div>
+      
+      <!-- All Buttons -->
+      <div class="animated fadeInUp" padding>
+        <button ion-button color="white" full round (tap)="openPage('RegistrationComponent')">
+           {{'LANDING_PAGE.REGISTRATION' | translate}}
+        </button>
+        <button ion-button color="white" full round (tap)="openPage('LoginComponent')">
+           {{'LANDING_PAGE.LOGIN' | translate}}
+        </button>
+        <button ion-button color="white" full round (tap)="gotoProfilePage('ProfileComponent')">
+           {{'LANDING_PAGE.SKIP' | translate}}
+        </button>
+
+      </div>
+   </div>
+</ion-content>

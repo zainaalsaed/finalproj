@@ -1,0 +1,70 @@
+<!-- Calendar Page -->
+<!--
+	For the fullcalendar, we used
+	https://www.npmjs.com/package/angular2-fullcalendar
+-->
+<!-- Header Options -->
+<ion-header>
+	 <ion-navbar color="white" hideBackButton>
+			<button ion-button menuToggle>
+				 <ion-icon name="menu"></ion-icon>
+			</button>
+			<ion-title>{{'CALENDAR.TITLE' | translate}}</ion-title>
+	 </ion-navbar>
+</ion-header>
+
+<!--
+	- Main Body Section
+	- Main body contains two Section
+	- Section 1 => Calendar View
+	- Section 2 => Calendar List
+	- Calendar view part represents a calendar
+	- Calendar list part represents all events
+-->
+
+<ion-content id="calendar-v1">
+		
+		<!-- Segment -->
+
+		<!-- Segment Header -->
+	 <div padding>
+			<ion-segment [(ngModel)]="segment" color="secondary">
+			<ion-segment-button value="calendarView">
+				 {{'CALENDAR.CALENDAR_VIEW' | translate}}
+			</ion-segment-button>
+			<ion-segment-button value="calendarList">
+				 {{'CALENDAR.CALENDAR_LIST' | translate}}
+			</ion-segment-button>
+			</ion-segment>
+	 </div>
+
+	 <!-- Segment Body -->
+	 <div [ngSwitch]="segment">
+
+			<!-- Section 1 - Calendar View -->
+			<ion-list *ngSwitchCase="'calendarView'">
+				 <angular2-fullcalendar class="calendar" [options]="calendarOptions"></angular2-fullcalendar>
+			</ion-list>
+
+			<!-- Section 2 - Calendar List -->
+			<ion-list *ngSwitchCase="'calendarList'">
+
+				<!-- List of events -->
+				 <ion-list>
+						<ion-item *ngFor="let event of allEvents">
+							 <ion-label>{{event.title}}</ion-label>
+							 <ion-datetime item-right displayFormat="MMM DD, YYYY" [(ngModel)]="event.start"></ion-datetime>
+						</ion-item>
+				 </ion-list>
+				 
+				 <!-- Add New Event Button -->
+				 <ion-fab bottom right>
+						<button ion-fab mini color="secondary" (click)="addNewEvent()">
+							 <ion-icon name="add"></ion-icon>
+						</button>
+				 </ion-fab>
+
+			</ion-list>
+
+	 </div>
+</ion-content>

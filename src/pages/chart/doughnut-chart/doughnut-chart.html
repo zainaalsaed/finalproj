@@ -1,0 +1,20 @@
+<!-- Doughnut Chart -->
+
+<!-- See more details about the chart -  http://valor-software.com/ng2-charts/ -->
+
+<ion-content>
+   <ion-card>
+      <ion-card-header>
+         <p text-center>Doughnut Chart</p>
+      </ion-card-header>
+      <ion-card-content>
+         <!-- Add card content here! -->
+         <canvas baseChart
+         [data]="doughnutChartData"
+         [labels]="doughnutChartLabels"
+         [chartType]="doughnutChartType"
+         (chartHover)="chartHovered($event)"
+         (chartClick)="chartClicked($event)"></canvas>
+      </ion-card-content>
+   </ion-card>
+</ion-content>

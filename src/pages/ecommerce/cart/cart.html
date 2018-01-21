@@ -1,0 +1,58 @@
+<!-- Cart Page -->
+
+<!-- Header -->
+<ion-header>
+   <ion-toolbar>
+      <ion-title>
+         Cart Items
+      </ion-title>
+      <ion-buttons start>
+        <!-- Dismiss button -->
+         <button ion-button (click)="dismiss()">
+         <span ion-text color="primary">Cancel</span>
+         </button>
+      </ion-buttons>
+   </ion-toolbar>
+</ion-header>
+
+<!-- Contents -->
+<ion-content id="cart-v1">
+   <ion-list>
+
+     <!-- Cart Item product details -->
+      <ion-item text-wrap *ngFor="let product of products; let i = index">
+         <ion-thumbnail item-left>
+            <img [src]="product.productInfo.image" imageViewer>
+         </ion-thumbnail>
+         <h2>{{product.productInfo.name}}</h2>
+         <p>Quantity: {{product.quantity}} * Price: ${{product.productInfo.price}} = ${{ product.productInfo.price * product.quantity }} </p>
+         <button ion-button clear item-right color="secondary" (click)="removeItem(product.productInfo.id, i, product.productInfo.price * product.quantity)">
+            <ion-icon name="close"></ion-icon>
+         </button>
+      </ion-item>
+
+      <!-- Total price -->
+      <ion-item *ngIf="products.length > 0">
+         <span text-left ion-text color="tomato">Subtotal</span>
+         <span item-right ion-text color="tomato"> ${{ totalPrice }}</span>
+      </ion-item>
+
+      <!-- When product not exist -->
+      <div class="empty-cart" *ngIf="products.length == 0">
+         <img src="https://s3-us-west-2.amazonaws.com/fulcrumy-ionic2/shopping_cart.jpg">
+      </div>
+
+   </ion-list>
+</ion-content>
+
+<!-- Footer Option -->
+
+<!--
+  - Check products length 
+  - If products length  greater than zero then show checkout button option 
+-->
+<ion-footer *ngIf="products.length > 0">
+   <ion-toolbar>
+      <button ion-button full color="tomato">Checkout</button>
+   </ion-toolbar>
+</ion-footer>

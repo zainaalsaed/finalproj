@@ -1,0 +1,31 @@
+#latest-news-v1 {
+	.slide-1 {
+		h1 {
+			font-size: 25px !important;
+		}
+		p {	    
+			font-family: serif;
+		}
+	}
+	.slide-2 {
+		.card-background-page {
+			ion-card {
+				position: relative;
+				text-align: center;
+			}
+			.short-story {
+				font-size: 14px;
+				font-family: cursive;
+			}
+			.card-shadow {
+				box-shadow: 0 1px 1px 1px rgba(255, 255, 255, 0.5);
+			}
+		}
+	}
+	// Slider bullet
+	.swiper-pagination-bullet {
+		background: #FF5722;
+		width: 12px;
+		height: 12px;
+	}
+}
