@@ -56,20 +56,8 @@ export class LoginComponent {
     });
     prompt.present();
   }
-  
-  /**
-   * Submit function of login form
-   * This function will take user to profile page
-  */
-  loginForm() {
-    this.navCtrl.setRoot('ProfileComponent');
-  }
 
-  /**
-   * Skip function
-   * This function will take user to landing page
-  */
-  skip() {
-    this.navCtrl.setRoot('LandingPageComponent');
+  openPage(component) {
+    this.navCtrl.setRoot(component);
   }
 }
