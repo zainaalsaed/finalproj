@@ -4,10 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule, Http } from '@angular/http';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AdMobFree } from '@ionic-native/admob-free';
 import { TranslateModule, TranslateStaticLoader, TranslateLoader } from 'ng2-translate/ng2-translate';
 import { Geolocation } from '@ionic-native/geolocation';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
 import { MyApp } from './app.component';
+import { AdmobFreeProvider } from '../providers/admob-free/admob-free';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { MyApp } from './app.component';
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    Geolocation
+    AdMobFree,
+    Geolocation,
+    AdmobFreeProvider
   ]
 })
 export class AppModule { }

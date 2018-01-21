@@ -4,6 +4,7 @@ import { Platform, Config, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { TranslateService } from 'ng2-translate';
+import { AdmobFreeProvider } from '../providers/admob-free/admob-free';
 
 @Component({
   templateUrl: 'app.html'
@@ -24,13 +25,24 @@ export class MyApp {
   pages: Array<{ title: string, component: any, leftIcon: string }>;
 
   constructor(public platform: Platform, private config: Config, statusBar: StatusBar,
-    splashScreen: SplashScreen, public translate: TranslateService) {
+    splashScreen: SplashScreen, public translate: TranslateService,
+    private admobFree: AdmobFreeProvider) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
       this.config.set('ios', 'backButtonText', '');
+
+      // Show Video Ad After 2 Minutes
+      setInterval(() => {
+        this.prepareAdmobVideo();
+      }, 120000);
+
+      // Show Interstitial Ad After 1 Minutes
+      setInterval(() => {
+        this.prepareInterstitial();
+      }, 60000);
     });
 
     // Set default translate language
@@ -70,5 +82,19 @@ export class MyApp {
   // Logout
   logout(component) {
     this.nav.setRoot(component);
+  }
+
+  /**
+   * Prepare and show admob Video ad
+   */
+  prepareAdmobVideo() {
+    this.admobFree.prepareAdmobVideo();
+  }
+
+  /**
+   * Prepare and show admob Interstitial Ad
+   */
+  prepareInterstitial() {
+    this.admobFree.prepareInterstitial();
   }
 }
