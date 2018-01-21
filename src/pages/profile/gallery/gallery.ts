@@ -15,7 +15,7 @@ export class GalleryComponent implements OnInit {
   images: GalleryModel[];
   constructor(public navCtrl: NavController,
     private galleryService: GalleryService,
-    public alertCtrl: AlertController) {}
+    public alertCtrl: AlertController) { }
   ngOnInit() {
     //called after the constructor and called  after the first ngOnChanges()
     this.images = this.galleryService.getAllPhotos();

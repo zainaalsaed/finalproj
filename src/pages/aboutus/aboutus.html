@@ -1,167 +1,164 @@
 <!-- Aboutus Page -->
 
 <!-- Header options-->
-<ion-header>
-   <ion-navbar color="tomato" hideBackButton>
-      <button ion-button menuToggle>
-         <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-title>{{'ABOUTUS.TITLE' | translate}}</ion-title> 
-   </ion-navbar>
+<ion-header no-border>
+  <ion-navbar color="white" hideBackButton>
+    <button ion-button menuToggle color="color1">
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{'ABOUTUS.TITLE' | translate}}</ion-title>
+  </ion-navbar>
 </ion-header>
 
 <!-- Content Options -->
 <ion-content id="aboutus-v1">
 
-    <!-- Content header title (Start)-->
-   <ion-card>
-      <img src="https://s3-us-west-2.amazonaws.com/fulcrumy-ionic2/7.jpg"/>
-      <div class="card-title">{{'ABOUTUS.TITLE' | translate}}</div>
-      <div class="card-subtitle">{{'ABOUTUS.SUBTITLE' | translate}}</div>
-   </ion-card>
-   <!-- Content header title (End)-->
+  <!-- Content header title (Start)-->
+  <ion-card>
+    <img src="https://s3-us-west-2.amazonaws.com/fulcrumy-ionic2/7.jpg" />
+    <div class="card-title">{{'ABOUTUS.TITLE' | translate}}</div>
+    <div class="card-subtitle">{{'ABOUTUS.SUBTITLE' | translate}}</div>
+  </ion-card>
+  <!-- Content header title (End)-->
 
-   <!-- Short description (Start)-->
-   <ion-card>
-      <ion-card-content>
-         There are many variations of passages of Lorem Ipsum available, but the majority have suffered 
-         alteration in some form, by injected humour, or randomised words which don't look even slightly
-          believable.
-      </ion-card-content>
-   </ion-card>
-   <!-- Short description (End)-->
+  <!-- Short description (Start)-->
+  <ion-card>
+    <ion-card-content>
+      There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by
+      injected humour, or randomised words which don't look even slightly believable.
+    </ion-card-content>
+  </ion-card>
+  <!-- Short description (End)-->
 
-   <!-- Segment (Start)-->
-   <!-- Segment for more details of about us. Here, Added three portan design, developmemt and support -->
-   
-   <!-- Segment Header -->
-   <div padding>
-      <ion-segment [(ngModel)]="segment">
-        <ion-segment-button value="design">
-          Design
-        </ion-segment-button>
-        <ion-segment-button value="development">
-          Development
-        </ion-segment-button>
-        <ion-segment-button value="support">
-          Support
-        </ion-segment-button>
-      </ion-segment>
-   </div>
+  <!-- Segment (Start)-->
+  <!-- Segment for more details of about us. Here, Added three portan design, developmemt and support -->
 
-   <!-- Segment Body -->
-   <div [ngSwitch]="segment">
+  <!-- Segment Header -->
+  <div padding>
+    <ion-segment [(ngModel)]="segment" color="color1">
+      <ion-segment-button value="design">
+        Design
+      </ion-segment-button>
+      <ion-segment-button value="development">
+        Development
+      </ion-segment-button>
+      <ion-segment-button value="support">
+        Support
+      </ion-segment-button>
+    </ion-segment>
+  </div>
 
-      <!-- Design Portion -->
-      <ion-card *ngSwitchCase="'design'">
-         <ion-card-header>
-            <ion-icon name="flower"></ion-icon>
-            <br>
-            Design
-         </ion-card-header>
-         <ion-card-content>
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-         </ion-card-content>
-      </ion-card>
+  <!-- Segment Body -->
+  <div [ngSwitch]="segment">
 
-      <!-- Development Portion -->
-      <ion-card *ngSwitchCase="'development'">
-         <ion-card-header>
-            <ion-icon name="flame"></ion-icon>
-            <br>
-            Development
-         </ion-card-header>
-         <ion-card-content>
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-         </ion-card-content>
-      </ion-card>
-
-      <!-- Support Portion -->
-      <ion-card *ngSwitchCase="'support'">
-         <ion-card-header>
-            <ion-icon name="help-circle"></ion-icon>
-            <br>
-            Support
-         </ion-card-header>
-         <ion-card-content>
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-         </ion-card-content>
-      </ion-card>
-   </div>
-   <!-- Segment (End) -->
-
-   <!-- Project Summery GRID (Start) -->
-   <ion-grid no-padding class="animated bounceInLeft">
-      <ion-row wrap>
-         <ion-col col-6 class="col1">
-            <ion-icon name="person"></ion-icon>
-            <p ion-text color="secondary">1000</p>
-            <p ion-text color="secondary">Happy Clients</p>
-         </ion-col>
-         <ion-col col-6 class="col2">
-            <ion-icon name="calendar"></ion-icon>
-            <p ion-text color="secondary">50+</p>
-            <p ion-text color="secondary">New Idea</p>
-         </ion-col>
-      </ion-row>
-      <ion-row wrap>
-         <ion-col col-6 class="col2">
-            <ion-icon name="md-pin"></ion-icon>
-            <p ion-text color="secondary">3000+</p>
-            <p ion-text color="secondary">Git Commit</p>
-         </ion-col>
-         <ion-col col-6 class="col1">
-            <ion-icon name="stats"></ion-icon>
-            <p ion-text color="secondary">700+</p>
-            <p ion-text color="secondary">Working Hours</p>
-         </ion-col>
-      </ion-row>
-   </ion-grid>
-   <!-- Project Summery (End) -->
-
-   <!-- What People Say (Start) -->
-   <ion-card>
+    <!-- Design Portion -->
+    <ion-card *ngSwitchCase="'design'">
       <ion-card-header>
-         WHAT PEOPLE SAY
+        <ion-icon name="flower"></ion-icon>
+        <br> Design
       </ion-card-header>
       <ion-card-content>
-         It is a long established fact that a reader will be distracted by the readable content of 
-         a page when looking at its layout.
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
+        from 45 BC, making it over 2000 years old.
       </ion-card-content>
-      <!-- Slider (Start) -->
-      <!-- Slider added feedback of multiple person-->
-      <ion-slides padding id="slider" pager="true" zoom="true" loop autoplay="5000" style="direction:ltr">
-         <ion-slide>
-            <div>
-               <img src="https://s3-us-west-2.amazonaws.com/fulcrumy-ionic2/16.jpg" alt="">
-               <p>There are many variations of passages of Lorem Ipsum available, 
-                 but the majority have suffered alteration in some form, by injected humour, 
-                 or randomised words which don't look even slightly believable.</p>
-               <br>
-               <p><b>Jennifer Katharine</b></p>
-               <p>Developer</p>
-            </div>
-         </ion-slide>
-         <ion-slide>
-            <img src="https://s3-us-west-2.amazonaws.com/fulcrumy-ionic2/17.jpeg" alt="">
-            <p>Various versions have evolved over the years, sometimes by accident, 
-              sometimes on purpose (injected humour and the like).</p>
-            <br>
-            <p><b>John Papa</b></p>
-            <p>Design</p>
-         </ion-slide>
-         <ion-slide>
-            <img src="https://s3-us-west-2.amazonaws.com/fulcrumy-ionic2/18.jpeg" alt="">
-            <p>There are many variations of passages of Lorem Ipsum available, 
-              but the majority have suffered alteration in some form, by injected humour, 
-              or randomised words which don't look even slightly believable.</p>
-            <br>
-            <p><b>Max Lynch</b></p>
-            <p>CEO</p>
-         </ion-slide>
-      </ion-slides>
-      <!-- Slider (End) -->
-   </ion-card>
-   <!-- What People Say (End) -->
+    </ion-card>
+
+    <!-- Development Portion -->
+    <ion-card *ngSwitchCase="'development'">
+      <ion-card-header>
+        <ion-icon name="flame"></ion-icon>
+        <br> Development
+      </ion-card-header>
+      <ion-card-content>
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
+        from 45 BC, making it over 2000 years old.
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Support Portion -->
+    <ion-card *ngSwitchCase="'support'">
+      <ion-card-header>
+        <ion-icon name="help-circle"></ion-icon>
+        <br> Support
+      </ion-card-header>
+      <ion-card-content>
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
+        from 45 BC, making it over 2000 years old.
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <!-- Segment (End) -->
+
+  <!-- Project Summery GRID (Start) -->
+  <ion-grid no-padding class="animated bounceInLeft">
+    <ion-row wrap>
+      <ion-col col-6 class="col1">
+        <ion-icon name="person"></ion-icon>
+        <p ion-text>1000</p>
+        <p ion-text>Happy Clients</p>
+      </ion-col>
+      <ion-col col-6 class="col2">
+        <ion-icon name="calendar"></ion-icon>
+        <p ion-text>50+</p>
+        <p ion-text>New Idea</p>
+      </ion-col>
+    </ion-row>
+    <ion-row wrap>
+      <ion-col col-6 class="col2">
+        <ion-icon name="md-pin"></ion-icon>
+        <p ion-text>3000+</p>
+        <p ion-text>Git Commit</p>
+      </ion-col>
+      <ion-col col-6 class="col1">
+        <ion-icon name="stats"></ion-icon>
+        <p ion-text>700+</p>
+        <p ion-text>Working Hours</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- Project Summery (End) -->
+
+  <!-- What People Say (Start) -->
+  <ion-card>
+    <ion-card-header>
+      WHAT PEOPLE SAY
+    </ion-card-header>
+    <ion-card-content>
+      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+    </ion-card-content>
+    <!-- Slider (Start) -->
+    <!-- Slider added feedback of multiple person-->
+    <ion-slides padding id="slider" pager="true" zoom="true" loop autoplay="5000" style="direction:ltr">
+      <ion-slide>
+        <div>
+          <img src="https://s3-us-west-2.amazonaws.com/fulcrumy-ionic2/16.jpg" alt="">
+          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some
+            form, by injected humour, or randomised words which don't look even slightly believable.</p>
+          <br>
+          <p><b>Jennifer Katharine</b></p>
+          <p>Developer</p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <img src="https://s3-us-west-2.amazonaws.com/fulcrumy-ionic2/17.jpeg" alt="">
+        <p>Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the
+          like).
+        </p>
+        <br>
+        <p><b>John Papa</b></p>
+        <p>Design</p>
+      </ion-slide>
+      <ion-slide>
+        <img src="https://s3-us-west-2.amazonaws.com/fulcrumy-ionic2/18.jpeg" alt="">
+        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some
+          form, by injected humour, or randomised words which don't look even slightly believable.</p>
+        <br>
+        <p><b>Max Lynch</b></p>
+        <p>CEO</p>
+      </ion-slide>
+    </ion-slides>
+    <!-- Slider (End) -->
+  </ion-card>
+  <!-- What People Say (End) -->
 
 </ion-content>

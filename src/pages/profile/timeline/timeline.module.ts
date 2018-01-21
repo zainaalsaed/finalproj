@@ -16,4 +16,4 @@ import { TimelineComponent } from './timeline';
     TranslateModule
   ]
 })
-export class TimelineModule {}
+export class TimelineModule { }

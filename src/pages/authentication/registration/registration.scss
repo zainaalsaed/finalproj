@@ -1,50 +1,26 @@
 #registration-v1 {
     /* Background Style */
-    text-align: center;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: auto;
-    height: auto;
-    background: -moz-linear-gradient($background-main-color, $background-secondary-color); /* FF 3.6+ */  
-    background: -ms-linear-gradient($background-main-color, $background-secondary-color); /* IE10 */  
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #000000), color-stop(100%, $background-secondary-color)); /* Safari 4+, Chrome 2+ */  
-    background: -webkit-linear-gradient($background-main-color, $background-secondary-color); /* Safari 5.1+, Chrome 10+ */  
-    background: -o-linear-gradient($background-main-color, $background-secondary-color); /* Opera 11.10 */  
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$background-secondary-color', endColorstr=$background-secondary-color); /* IE6 & IE7 */  
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='$background-secondary-color', endColorstr=$background-secondary-color)"; /* IE8+ */  
-    background: linear-gradient($background-main-color, $background-secondary-color); /* the standard */  
-    z-index: 1;
+    height: 100%;
+    background: linear-gradient(-60deg, $themeColor1);
     background-size: cover;
-    position: absolute;
     /* Logo Style */
     .logo {
         margin-top: 10%;
         margin-bottom: 10%;
+        text-align: center;
+        color: #fff;
         img {
-            width: 50%;
+            width: 100px;
+            border-radius: 50%;
         }
     }
     /* main body part style */
     .main-body {
         form {
             ion-list {
-                margin-bottom: 0px;
                 .item-input {
                     ion-label {
-                        color: #000;
                         margin-left: 10px;
-                    }
-                }
-                ion-item {
-                    background: transparent;
-                    padding-left: 0;
-                    .text-input-ios {
-                        padding: 12px;
-                    }
-                    *::-webkit-input-placeholder {
-                        color: #000;
                     }
                 }
                 .buttons {

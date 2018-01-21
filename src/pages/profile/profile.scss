@@ -1,56 +1,45 @@
 #profile-v1 {
-  width: 100%;
-  
-  .slider-slide {
-    position: relative;
-    display: block;
-    float: left;
     width: 100%;
-    height: 100%;
-    vertical-align: top;
-  }
-  
-  ion-slides {
-    height: auto;
-  }
-  .profile-part1 {
-    background: $menu-toolbar;
-    height: 50%;
-    
-    img {
-      width: 120px;
-      height: 150px;
-      border-radius: 50%;
-      padding: 1px;
-      border: 3px solid #485300;
+    .slider-slide {
+        position: relative;
+        display: block;
+        float: left;
+        width: 100%;
+        height: 100%;
+        vertical-align: top;
     }
-    .name {
-      color: #222;
-      font-size: 25px;
-      line-height: 0;
-      font-weight: bold;
-      font-family: serif;
+    ion-slides {
+        height: auto;
     }
-    .title {
-      font-size: 16px;
-      color: #495404;
+    .profile-part1 {
+        background: $color1;
+        height: 50%;
+        img {
+            width: 120px;
+            height: 150px;
+            border-radius: 50%;
+            padding: 1px;
+            border: 3px solid $color2;
+        }
+        .name {
+            font-size: 25px;
+            line-height: 0;
+            font-weight: bold;
+            font-family: serif;
+        }
+        .title {
+            font-size: 16px;
+        }
     }
-  }
-  .profile-part2 {
-    .profile-details { 
-      font-size: 14px;
-      font-family: serif;
-      color: #222;
+    .profile-part2 {
+        .profile-details {
+            font-size: 14px;
+            font-family: serif;
+            color: #222;
+        }
     }
-  }
-  .profile-segment {
-    margin-top: 0.5%;
-    background: #F6F7F9;
-  }
-  // Slider bullet
-  .swiper-pagination-bullet {
-    background: $menu-toolbar;
-    width: 10px;
-    height: 10px;
-  }
+    .profile-segment {
+        margin-top: 0.5%;
+        background: #F6F7F9;
+    }
 }

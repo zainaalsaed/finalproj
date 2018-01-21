@@ -22,15 +22,15 @@ export class FullCalendarComponent implements AfterViewInit {
   calendarOptions: Object;
 
   constructor(private calendarService: CalendarService,
-              public alertCtrl: AlertController) {
-                this.alertCtrl = alertCtrl;
+    public alertCtrl: AlertController) {
+    this.alertCtrl = alertCtrl;
 
-                /** Load all calendar events */
-                this.allEvents = this.calendarService.getAllEvents();
+    /** Load all calendar events */
+    this.allEvents = this.calendarService.getAllEvents();
 
-                /** Default segment of calendar */
-                this.segment = "calendarView";
-              }
+    /** Default segment of calendar */
+    this.segment = "calendarView";
+  }
 
   ngAfterViewInit() {
 
@@ -41,7 +41,7 @@ export class FullCalendarComponent implements AfterViewInit {
       height: 450,
       aspectRatio: 2,
       displayEventTime: false,
-      eventColor: '#53aba8',
+      eventColor: '#f83600',
       header: {
         left: 'prev',
         center: 'title',
@@ -59,8 +59,8 @@ export class FullCalendarComponent implements AfterViewInit {
       },
       eventLimit: true, // allow "more" link when too many events
       events: this.allEvents,
-      dayClick: function() {
-        this.css('background-color', 'red');
+      dayClick: function () {
+        this.css('background-color', '#f9d423');
       }
     };
   }
@@ -91,7 +91,7 @@ export class FullCalendarComponent implements AfterViewInit {
         name: 'end',
         placeholder: 'End Date',
         type: 'date'
-      }, ],
+      },],
       buttons: [{
         text: 'Cancel',
         handler: data => {

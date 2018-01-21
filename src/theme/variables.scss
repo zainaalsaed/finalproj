@@ -43,22 +43,32 @@ $colors: (
   white: #ffffff,
   tomato: #d14800,
   whatsapp:   #075E54,
-  ash: #eceaea
+  ash: #eceaea,
+  color1: #f9d423,
+  color2: #f83600
 );
-// SideMenu Customs style
-$menu-toolbar: #2fd397;
-$menu-body: #222;
+
+$color1: #f9d423;
+$color2: #f83600;
+$themeColor1: (#f9d423, #f83600);
 
 // Alert box custom style
 $alert-ios-input-padding: 10px;
-$alert-ios-button-text-color: #7151D6;
+$alert-md-input-padding: 10px;
+$alert-md-button-text-color: $color2;
+$alert-ios-button-text-color: $color2;
 
-// Background Colors
-$background-main-color: #fc6076;
-$background-secondary-color: #ff9a44;
+// Toogle
+$toggle-ios-height: 20px;
+$toggle-md-height: 20px;
 
-$themeColor1: (#ff0844, #ffb199);
-
+// Searchbar
+$searchbar-ios-background-color: $color1;
+$searchbar-md-background-color: $color1;
+$searchbar-ios-min-height: 60px;
+$searchbar-md-min-height: 60px;
+$searchbar-ios-input-height: 5rem;
+$searchbar-md-input-height: 5rem;
 
 // App iOS Variables
 // --------------------------------------------------

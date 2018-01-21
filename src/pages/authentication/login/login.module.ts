@@ -16,4 +16,4 @@ import { LoginComponent } from './login';
     TranslateModule
   ]
 })
-export class LoginModule {}
+export class LoginModule { }

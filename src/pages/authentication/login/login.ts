@@ -17,15 +17,15 @@ export class LoginComponent {
   user = {};
 
   constructor(public navCtrl: NavController,
-              public alertCtrl: AlertController,
-              public translate: TranslateService,
-              private menu: MenuController) {
-                this.navCtrl = navCtrl;
-                this.alertCtrl = alertCtrl;
-                this.menu = menu;
-                this.menu.enable(false); // Disable sidemenu
-              }
-              
+    public alertCtrl: AlertController,
+    public translate: TranslateService,
+    private menu: MenuController) {
+    this.navCtrl = navCtrl;
+    this.alertCtrl = alertCtrl;
+    this.menu = menu;
+    this.menu.enable(false); // Disable sidemenu
+  }
+
   /** 
    * Forget Password
    * Open forget password alert box after click on forget password buttons
@@ -41,7 +41,7 @@ export class LoginComponent {
       inputs: [{
         name: 'email',
         placeholder: this.translate.instant('FORGET_PASSWORD.EMAIL')
-      }, ],
+      },],
       buttons: [{
         text: this.translate.instant('FORGET_PASSWORD.CANCEL'),
         handler: data => {

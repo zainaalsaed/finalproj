@@ -1,10 +1,10 @@
 /* Custom calendar style */
+
 // @import "fullcalendar/dist/fullcalendar.min.css";
 #calendar-v1 {
     time.icon {
         font-size: 1em;
         /* change icon size */
-        
         display: block;
         position: relative;
         width: 7em;
@@ -24,7 +24,7 @@
     }
     .fc-widget-content.fc-state-highlight:before {
         content: '\00a0';
-        border: 1px solid #53aba8;
+        border: 1px solid $color1;
         height: 100%;
         width: calc(100% - 2px);
         display: block;
@@ -50,7 +50,7 @@
         .fc-center {
             .fc-button {
                 background: transparent !important;
-                border: 1px solid #53aba8;
+                border: 1px solid $color1;
                 box-shadow: none !important;
             }
         }

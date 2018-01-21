@@ -4,13 +4,13 @@
 	https://www.npmjs.com/package/angular2-fullcalendar
 -->
 <!-- Header Options -->
-<ion-header>
-	 <ion-navbar color="white" hideBackButton>
-			<button ion-button menuToggle>
-				 <ion-icon name="menu"></ion-icon>
-			</button>
-			<ion-title>{{'CALENDAR.TITLE' | translate}}</ion-title>
-	 </ion-navbar>
+<ion-header no-border>
+	<ion-navbar hideBackButton color="white">
+		<button ion-button menuToggle color="color1">
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>{{'CALENDAR.TITLE' | translate}}</ion-title>
+	</ion-navbar>
 </ion-header>
 
 <!--
@@ -23,48 +23,48 @@
 -->
 
 <ion-content id="calendar-v1">
-		
-		<!-- Segment -->
 
-		<!-- Segment Header -->
-	 <div padding>
-			<ion-segment [(ngModel)]="segment" color="secondary">
+	<!-- Segment -->
+
+	<!-- Segment Header -->
+	<div padding>
+		<ion-segment [(ngModel)]="segment" color="color1">
 			<ion-segment-button value="calendarView">
-				 {{'CALENDAR.CALENDAR_VIEW' | translate}}
+				{{'CALENDAR.CALENDAR_VIEW' | translate}}
 			</ion-segment-button>
 			<ion-segment-button value="calendarList">
-				 {{'CALENDAR.CALENDAR_LIST' | translate}}
+				{{'CALENDAR.CALENDAR_LIST' | translate}}
 			</ion-segment-button>
-			</ion-segment>
-	 </div>
+		</ion-segment>
+	</div>
 
-	 <!-- Segment Body -->
-	 <div [ngSwitch]="segment">
+	<!-- Segment Body -->
+	<div [ngSwitch]="segment">
 
-			<!-- Section 1 - Calendar View -->
-			<ion-list *ngSwitchCase="'calendarView'">
-				 <angular2-fullcalendar class="calendar" [options]="calendarOptions"></angular2-fullcalendar>
+		<!-- Section 1 - Calendar View -->
+		<ion-list *ngSwitchCase="'calendarView'">
+			<angular2-fullcalendar class="calendar" [options]="calendarOptions"></angular2-fullcalendar>
+		</ion-list>
+
+		<!-- Section 2 - Calendar List -->
+		<ion-list *ngSwitchCase="'calendarList'">
+
+			<!-- List of events -->
+			<ion-list>
+				<ion-item *ngFor="let event of allEvents">
+					<ion-label>{{event.title}}</ion-label>
+					<ion-datetime item-right displayFormat="MMM DD, YYYY" [(ngModel)]="event.start"></ion-datetime>
+				</ion-item>
 			</ion-list>
 
-			<!-- Section 2 - Calendar List -->
-			<ion-list *ngSwitchCase="'calendarList'">
+			<!-- Add New Event Button -->
+			<ion-fab bottom right>
+				<button ion-fab mini color="color1" (click)="addNewEvent()">
+					<ion-icon name="add"></ion-icon>
+				</button>
+			</ion-fab>
 
-				<!-- List of events -->
-				 <ion-list>
-						<ion-item *ngFor="let event of allEvents">
-							 <ion-label>{{event.title}}</ion-label>
-							 <ion-datetime item-right displayFormat="MMM DD, YYYY" [(ngModel)]="event.start"></ion-datetime>
-						</ion-item>
-				 </ion-list>
-				 
-				 <!-- Add New Event Button -->
-				 <ion-fab bottom right>
-						<button ion-fab mini color="secondary" (click)="addNewEvent()">
-							 <ion-icon name="add"></ion-icon>
-						</button>
-				 </ion-fab>
+		</ion-list>
 
-			</ion-list>
-
-	 </div>
+	</div>
 </ion-content>

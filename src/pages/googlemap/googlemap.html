@@ -6,9 +6,9 @@
 -->
 
 <!-- Header part -->
- <ion-header>
-  <ion-navbar color="navbarColor" hideBackButton>
-    <button ion-button menuToggle>
+<ion-header no-border>
+  <ion-navbar color="white" hideBackButton>
+    <button ion-button menuToggle color="color1">
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>{{'GOOGLE_MAP.TITLE' | translate}}</ion-title>
@@ -17,7 +17,7 @@
 
 <!-- Content part -->
 <ion-content>
-  <ion-tabs color="secondary">
+  <ion-tabs color="color1">
     <ion-tab tabTitle="{{'GOOGLE_MAP.STANDARD' | translate}}" [root]="StandardMap"></ion-tab>
     <ion-tab tabTitle="{{'GOOGLE_MAP.SILVER' | translate}}" [root]="SilverMap"></ion-tab>
     <ion-tab tabTitle="{{'GOOGLE_MAP.NIGHT' | translate}}" [root]="NightMap"></ion-tab>

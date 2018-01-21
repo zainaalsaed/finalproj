@@ -1,6 +1,4 @@
 // http://ionicframework.com/docs/theming/
-
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -14,20 +12,53 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.swiper-pagination-bullet {
+    background: linear-gradient(-60deg, $themeColor1);
+    width: 10px;
+    height: 10px;
+}
+
 .menu-inner {
     ion-toolbar {
-      height: 100px;
-       img {
-        width: 100px;
-       }
+        padding-bottom: 5%;
+        padding-top: 5%;
+        .contents {
+            width: 100%;
+            .left {
+                float: left;
+                width: 30%;
+                img {
+                    width: 70px;
+                    height: 30%;
+                    border-radius: 50%;
+                    margin-top: 5%;
+                }
+            }
+            .right {
+                width: 70%;
+                float: right;
+                margin-top: 8%;
+            }
+        }
     }
     .toolbar-background {
-      background: $menu-toolbar;
+        background: linear-gradient(to right, $themeColor1);
     }
     ion-content {
-      background: #222;
-      .item {
-        background-color: transparent !important;
-      }
+        .list {
+            margin-top: 3%;
+            margin-bottom: 0 !important;
+        }
+        .item {
+            background-color: transparent !important;
+            color: #222;
+            font-weight: bold;
+            font-size: 13px;
+        }
+    }
+    ion-footer {
+        .button {
+            background: linear-gradient(to right, $themeColor1) !important;
+        }
     }
 }

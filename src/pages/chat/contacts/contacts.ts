@@ -19,7 +19,7 @@ export class ChatContactsComponent implements OnInit {
     ModalController, private contacts: Contacts) {
     this.findContact('');
   }
-  ngOnInit() {}
+  ngOnInit() { }
   /**
    * Function 'findContact()'
    *  This funtion find all the contacts

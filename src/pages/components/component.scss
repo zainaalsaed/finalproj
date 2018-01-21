@@ -1,41 +1,41 @@
 #component-v1 {
-  height: 100%;
-  ion-grid {
     height: 100%;
-    ion-row {
-      height: 20%;
-      .col1 {
-        background: $menu-toolbar;
-        text-align: center;
-        padding-top: 5%;
-        ion-icon {
-          color: #505050;
-          font-size: 2.0em;
-          line-height: 0;
+    ion-grid {
+        height: 100%;
+        ion-row {
+            height: 20%;
+            .col1 {
+                background: $color1;
+                text-align: center;
+                padding-top: 5%;
+                ion-icon {
+                    color: #505050;
+                    font-size: 2.0em;
+                    line-height: 0;
+                }
+                p {
+                    line-height: 0;
+                    color: #505050;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            }
+            .col2 {
+                background: #ffffff;
+                text-align: center;
+                padding-top: 5%;
+                ion-icon {
+                    color: #505050;
+                    font-size: 2.0em;
+                    line-height: 0;
+                }
+                p {
+                    line-height: 0;
+                    color: #505050;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            }
         }
-        p {
-          line-height: 0;
-          color: #505050;
-          font-size: 18px;
-          font-weight: bold;
-        }
-      }
-      .col2 {
-        background: #ffffff;
-        text-align: center;
-        padding-top: 5%;
-        ion-icon {
-          color: #505050;
-          font-size: 2.0em;
-          line-height: 0;
-        }
-        p {
-          line-height: 0;
-          color: #505050;
-          font-size: 18px;
-          font-weight: bold;
-        }
-      }
     }
-  }
 }

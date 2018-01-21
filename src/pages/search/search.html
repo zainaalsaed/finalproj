@@ -1,33 +1,33 @@
 <!-- Aboutus Page -->
 
 <!-- Header options-->
-<ion-header>
-   <ion-navbar color="white">
-      <button ion-button menuToggle>
-         <ion-icon name="menu"></ion-icon>
-      </button>
+<ion-header no-border>
+  <ion-navbar color="white">
+    <button ion-button menuToggle color="color1">
+      <ion-icon name="menu"></ion-icon>
+    </button>
 
-      <ion-title>{{'SEARCH.TITLE' | translate}}</ion-title>
-      <!-- Search option button -->
-      <!--
+    <ion-title>{{'SEARCH.TITLE' | translate}}</ion-title>
+    <!-- Search option button -->
+    <!--
         - This button can allow to change search option,
         - after click on this button its open a alert window and its contains some of options
       -->
-      <ion-buttons end>
-         <button ion-button icon-only (click)="changeSearchOption()">
-            <ion-icon name="options"></ion-icon>
-         </button>
-      </ion-buttons>
-   </ion-navbar>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="changeSearchOption()" color="color2">
+        <ion-icon name="options"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
 </ion-header>
 <!-- Main body content options -->
 <ion-content id="search-v1">
   <!-- When search option 'rawData' this div will be oprn -->
-   <div *ngIf="searchOption == 'rawData'">
-     <rawdata></rawdata>
-   </div>
-   <!-- When search option 'autocomplete' this div will be oprn -->
-   <div *ngIf="searchOption == 'autocomplete'">
-     <autocomplete></autocomplete>
-   </div>
+  <div *ngIf="searchOption == 'rawData'">
+    <rawdata></rawdata>
+  </div>
+  <!-- When search option 'autocomplete' this div will be oprn -->
+  <div *ngIf="searchOption == 'autocomplete'">
+    <autocomplete></autocomplete>
+  </div>
 </ion-content>

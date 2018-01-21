@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 @Injectable()
 export class TimelineService {
-  constructor() {}
+  constructor() { }
   getAllPosts() {
     return [{
       id: 1,

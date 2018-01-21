@@ -5,13 +5,13 @@
 -->
 
 <!-- Header part -->
-<ion-header>
-   <ion-navbar color="navbarColor">
-      <button ion-button menuToggle>
-         <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-title>Contact</ion-title>
-   </ion-navbar>
+<ion-header no-border>
+    <ion-navbar color="white">
+        <button ion-button menuToggle color="color1">
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Contact</ion-title>
+    </ion-navbar>
 </ion-header>
 <!-- End Header -->
 
@@ -26,7 +26,7 @@
                 <!-- Run loop depend on contact phone number -->
                 <div *ngFor="let phone of contact.phoneNumbers" item-right>
                     <!-- Display contact phone number -->
-                <ion-badge teal *ngIf="phone.type == 'mobile'">{{phone.value}}</ion-badge>
+                    <ion-badge teal *ngIf="phone.type == 'mobile'">{{phone.value}}</ion-badge>
                 </div>
             </ion-item>
         </ion-item-sliding>

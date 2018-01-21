@@ -1,44 +1,44 @@
 <!-- Category Page -->
 
 <!-- Header part -->
-<ion-header>
-   <ion-navbar color="white" hideBackButton>
-      <button ion-button menuToggle>
-         <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-title>{{'ECOMMERCE.TITLE' | translate}}</ion-title>
-   </ion-navbar>
+<ion-header no-border>
+  <ion-navbar color="white" hideBackButton>
+    <button ion-button menuToggle color="color1">
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{'ECOMMERCE.TITLE' | translate}}</ion-title>
+  </ion-navbar>
 </ion-header>
 
 <!-- Contents -->
 <ion-content>
   <!-- Grid View of all categories -->
-   <ion-grid class="category-v1" no-padding style="direction:ltr">
-      <ion-row wrap no-padding>
-         <ion-col no-padding col-6 *ngFor="let category of allCategories" class='cell-{{category.id}}'>
-            <img class="animated bounceInRight" [src]="category.image" (click)="gotoProductsPage(category.id)">
-            <p class="animated bounceInLeft" ion-text color="secondary">{{category.name}}</p>
-         </ion-col>
-      </ion-row>
-   </ion-grid>
-   <!-- Fabs - for share product -->
-   <ion-fab right bottom>
-      <button ion-fab color="secondary">
-         <ion-icon name="arrow-dropup"></ion-icon>
+  <ion-grid class="category-v1" no-padding style="direction:ltr">
+    <ion-row wrap no-padding>
+      <ion-col no-padding col-6 *ngFor="let category of allCategories" class='cell-{{category.id}}'>
+        <img class="animated bounceInRight" [src]="category.image" (click)="gotoProductsPage(category.id)">
+        <p class="animated bounceInLeft" ion-text color="color2">{{category.name}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- Fabs - for share product -->
+  <ion-fab right bottom>
+    <button ion-fab color="color1">
+      <ion-icon name="arrow-dropup"></ion-icon>
+    </button>
+    <ion-fab-list side="top">
+      <button ion-fab>
+        <ion-icon name="logo-facebook"></ion-icon>
       </button>
-      <ion-fab-list side="top">
-         <button ion-fab>
-            <ion-icon name="logo-facebook"></ion-icon>
-         </button>
-         <button ion-fab>
-            <ion-icon name="logo-twitter"></ion-icon>
-         </button>
-         <button ion-fab>
-            <ion-icon name="logo-vimeo"></ion-icon>
-         </button>
-         <button ion-fab>
-            <ion-icon name="logo-googleplus"></ion-icon>
-         </button>
-      </ion-fab-list>
-   </ion-fab>
+      <button ion-fab>
+        <ion-icon name="logo-twitter"></ion-icon>
+      </button>
+      <button ion-fab>
+        <ion-icon name="logo-vimeo"></ion-icon>
+      </button>
+      <button ion-fab>
+        <ion-icon name="logo-googleplus"></ion-icon>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
 </ion-content>

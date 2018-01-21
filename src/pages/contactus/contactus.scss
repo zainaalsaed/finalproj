@@ -1,22 +1,22 @@
 #contactus-v1 {
     text-align: center;
     padding-top: 5%;
-	.contact-header {
-		.line1 {
-			color: tomato;
-		    font-size: 22px;
-		    font-weight: 600;
-		}
-		.address {
-			p {
+    .contact-header {
+        .line1 {
+            color: $color1;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .address {
+            p {
                 font-size: 14px;
                 line-height: 0px;
-			}
+            }
             .unstyled {
                 list-style: none;
             }
-		}
-	}
+        }
+    }
     .contact-form {
         p {
             font-size: 20px;
@@ -26,7 +26,7 @@
                 margin-bottom: 0px;
                 .item-input {
                     ion-label {
-                        color: $menu-toolbar;
+                        color: $color1;
                         margin-left: 10px;
                     }
                 }

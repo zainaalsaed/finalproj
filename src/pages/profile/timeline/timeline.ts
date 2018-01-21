@@ -13,7 +13,7 @@ import { TimelineService } from './timeline.service';
 })
 export class TimelineComponent implements OnInit {
   allPosts: TimelineModel[];
-  constructor(public navCtrl: NavController, private newsFeedService: TimelineService) {}
+  constructor(public navCtrl: NavController, private newsFeedService: TimelineService) { }
   ngOnInit() {
     //called after the constructor and called  after the first ngOnChanges()
     // Load all post of newsfeed

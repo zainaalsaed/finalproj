@@ -15,7 +15,7 @@ import { MyApp } from './app.component';
   ],
   imports: [
     IonicModule.forRoot(MyApp, {
-      menuType: 'push',
+      menuType: 'overlay',
       platforms: {
         ios: {
           menuType: 'overlay',
@@ -25,9 +25,9 @@ import { MyApp } from './app.component';
     BrowserModule,
     HttpModule,
     TranslateModule.forRoot({
-        provide: TranslateLoader,
-        useFactory: (http: Http) => new TranslateStaticLoader(http, 'assets/i18n', '.json'),
-        deps: [Http]
+      provide: TranslateLoader,
+      useFactory: (http: Http) => new TranslateStaticLoader(http, 'assets/i18n', '.json'),
+      deps: [Http]
     }),
     IonicImageViewerModule
   ],
@@ -38,8 +38,8 @@ import { MyApp } from './app.component';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     Geolocation
   ]
 })
-export class AppModule {}
+export class AppModule { }
