@@ -10,6 +10,24 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
 import { MyApp } from './app.component';
 import { AdmobFreeProvider } from '../providers/admob-free/admob-free';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import {IonicPageModule} from 'ionic-angular';
+import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import * as firebase from 'firebase';
+import 'firebase/firestore';
+
+
+const firebaseAuth = {
+  apiKey: "AIzaSyDaMitUUxNTOo7uWpsRuhDtl4ox7cvR1FA",
+  authDomain: "test-project-ca0ec.firebaseapp.com",
+  databaseURL: "https://test-project-ca0ec.firebaseio.com",
+  projectId: "test-project-ca0ec",
+  storageBucket: "",
+  messagingSenderId: "778431294120"
+  
+};
 
 @NgModule({
   declarations: [
@@ -31,7 +49,10 @@ import { AdmobFreeProvider } from '../providers/admob-free/admob-free';
       useFactory: (http: Http) => new TranslateStaticLoader(http, 'assets/i18n', '.json'),
       deps: [Http]
     }),
-    IonicImageViewerModule
+    IonicImageViewerModule,
+    AngularFireModule.initializeApp(firebaseAuth),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -43,6 +64,7 @@ import { AdmobFreeProvider } from '../providers/admob-free/admob-free';
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     AdMobFree,
     Geolocation,
+    BarcodeScanner,
     AdmobFreeProvider
   ]
 })

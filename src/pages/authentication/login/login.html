@@ -18,7 +18,7 @@
           <ion-label>
             <ion-icon name="md-mail"></ion-icon>
           </ion-label>
-          <ion-input class="ion-ios-locked-outline" type="email" placeholder="{{'LOGIN.EMAIL' | translate}}" [(ngModel)]="user.email"
+          <ion-input class="ion-ios-locked-outline" type="email"#username placeholder="{{'LOGIN.EMAIL' | translate}}" [(ngModel)]="user.email"
             name="email"></ion-input>
         </ion-item>
 
@@ -27,45 +27,68 @@
           <ion-label>
             <ion-icon name="md-eye"></ion-icon>
           </ion-label>
-          <ion-input class="ion-ios-locked-outline" type="password" placeholder="{{'LOGIN.PASSWORD' | translate}}" [(ngModel)]="user.password"
+          <ion-input class="ion-ios-locked-outline" type="password" #password  placeholder="{{'LOGIN.PASSWORD' | translate}}" [(ngModel)]="user.password"
             name="password"></ion-input>
         </ion-item>
+      
 
         <!-- Forget Password Button -->
-        <button ion-button clear color="white" (click)="showForgetPasswordPopup()">
+        <button ion-button clear color="white" (click)="forgotPass()">
           {{'LOGIN.FORGET_PASSWORD' | translate}} ?
         </button>
       </ion-list>
 
 
       <div padding class="animated fadeInUp">
-        <ion-grid>
-          <ion-row>
-            <!-- Login Button -->
-            <button ion-button type="button" color="dark" block (click)="openPage('ProfileComponent')">
-              {{'LOGIN.LOGIN' | translate}}
-            </button>
-          </ion-row>
-          <ion-row>
-            <ion-col col-6>
-              <button ion-button color="white" block>
-                <ion-icon name="logo-facebook" style="zoom:2.0"></ion-icon>
-              </button>
-            </ion-col>
-            <ion-col col-6>
-              <button ion-button icon-only color="white" block>
-                <ion-icon name="logo-twitter"></ion-icon>
-              </button>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <!-- Skip button-->
-            <button ion-button type="button" color="white" block clear (click)="openPage('LandingPageComponent')">
-              {{'LOGIN.SKIP' | translate}}
-            </button>
-          </ion-row>
-        </ion-grid>
+        <div>
+          <button ion-button icon-start block color="dark" (click)="regEm('NewsFeedComponent')" class="submit-btn" *ngIf="!loggedin">
+            <ion-icon name="log-in"></ion-icon>
+            {{'SIGN IN' | translate}} 
+          </button>
+    
+    
+          <button ion-button icon-start block color="dark" (click)="scan()" >
+            <ion-icon name="barcode"></ion-icon>
+            Scan your Driving lisence Barcode
+          </button>
+    
+    
+          <p text-center ion-text color="secondary">Or Sign in with:</p>
+    
+          <ion-grid>
+            <ion-row>
+              <ion-col col-4>
+                <button ion-button icon-only block class="btn-facebook" (click)="signInWithFacebook()" *ngIf="!loggedin">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </button>
+              </ion-col>
+              <ion-col col-4>
+                <button ion-button icon-only block class="btn-twitter" *ngIf="!loggedin">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </button>
+              </ion-col>
+              <ion-col col-4>
+                <button ion-button icon-only block class="btn-gplus" (click)="signInWithgoogle()" *ngIf="!loggedin">
+                  <ion-icon name="logo-googleplus"></ion-icon>
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+    
+        </div>
+    
+    
+        <!-- Other links -->
+        <div text-center margin-top>
+          <span ion-text color="tex" tappable (click)="regUser('RegistrationComponent')">New here? <strong>Sign up</strong></span>
+          <div text-center margin-top>
+              <span ion-text color="tex" tappable (click)="goBk()">go Back to <strong>Main Page</strong></span>
+            </div>
+        
+        </div>
+    
+    
       </div>
-    </form>
-  </div>
+      </form>
+      </div>
 </ion-content>

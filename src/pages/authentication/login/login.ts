@@ -4,7 +4,16 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, IonicPage, MenuController } from 'ionic-angular';
 import { TranslateService } from 'ng2-translate'; // Translate Service
-
+import firebase from 'firebase';
+import { FirebaseError } from '@firebase/util';
+import { BarcodeScanner,BarcodeScannerOptions } from '@ionic-native/barcode-scanner';
+import { User } from '@firebase/auth-types';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { ToastController, Nav} from "ionic-angular";
+import { ViewChild   } from '@angular/core';
+import { LandingPageComponent } from '../landing-page/landing-page';
+import { RegistrationComponent } from '../registration/registration';
+import { NewsFeedComponent } from '../../newsfeed/newsfeed';
 
 @IonicPage()
 @Component({
@@ -12,20 +21,34 @@ import { TranslateService } from 'ng2-translate'; // Translate Service
   templateUrl: 'login.html'
 })
 export class LoginComponent {
+  barcodeScanner: any;
+  loggedin= false;
+  data={ };
+  encodemyData:string;
+encodedData:{};
 
+  option:BarcodeScannerOptions ;
   // Define Veriables
-  user = {};
-
+  @ViewChild('username') user;
+	@ViewChild('password') password;
   constructor(public navCtrl: NavController,
-    public alertCtrl: AlertController,
-    public translate: TranslateService,
-    private menu: MenuController) {
-    this.navCtrl = navCtrl;
-    this.alertCtrl = alertCtrl;
-    this.menu = menu;
-    this.menu.enable(false); // Disable sidemenu
+     
+     private afAuth: AngularFireAuth,
+     private alertCtrl: AlertController,
+     private fire: AngularFireAuth,
+     /*public nav: NavController*/
+     public forgotCtrl: AlertController, 
+     public menu: MenuController, 
+     public toastCtrl: ToastController) {
+    this.menu.swipeEnable(false);
+     }
+  alert(message: string) {
+    this.alertCtrl.create({
+      title: 'Info!',
+      subTitle: message,
+      buttons: ['OK']
+    }).present();
   }
-
   /** 
    * Forget Password
    * Open forget password alert box after click on forget password buttons
@@ -34,30 +57,124 @@ export class LoginComponent {
    * @button    Cancel
    * @button    Send
   */
-  showForgetPasswordPopup() {
-    let prompt = this.alertCtrl.create({
-      title: this.translate.instant('FORGET_PASSWORD.TITLE'),
-      message: this.translate.instant('FORGET_PASSWORD.SUBTITLE'),
-      inputs: [{
+  
+
+  
+regEm(component) {
+
+  this.fire.auth.signInWithEmailAndPassword(this.user.value , this.password.value)
+  .then( data => {
+    console.log('got some data', this.fire.auth.currentUser);
+    this.alert('Success! You\'re logged in');
+    this.navCtrl.setRoot(component);
+    this.loggedin=true;
+
+    // user is logged in
+  })
+  .catch( error => {
+    console.log('got an error', error);
+    this.alert(error.message);
+  })
+  console.log('Would sign in with ', this.user.value, this.password.value);
+  
+}
+
+
+forgotPass() {
+  let forgot = this.forgotCtrl.create({
+    title: 'Forgot Password?',
+    message: "Enter you email address to send a reset link password.",
+    inputs: [
+      {
         name: 'email',
-        placeholder: this.translate.instant('FORGET_PASSWORD.EMAIL')
-      },],
-      buttons: [{
-        text: this.translate.instant('FORGET_PASSWORD.CANCEL'),
+        placeholder: 'Email',
+        type: 'email'
+      },
+    ],
+    buttons: [
+      {
+        text: 'Cancel',
         handler: data => {
           console.log('Cancel clicked');
         }
-      }, {
-        text: this.translate.instant('FORGET_PASSWORD.SEND'),
+      },
+      {
+        text: 'Send',
         handler: data => {
           console.log('Send clicked');
+          let toast = this.toastCtrl.create({
+            message: 'Email was sent successfully',
+            duration: 3000,
+            position: 'top',
+            cssClass: 'dark-trans',
+            closeButtonText: 'OK',
+            showCloseButton: true
+          });
+          toast.present();
         }
-      }]
-    });
-    prompt.present();
-  }
-
-  openPage(component) {
-    this.navCtrl.setRoot(component);
-  }
+      }
+    ]
+  });
+  forgot.present();
 }
+signInWithFacebook() {
+  this.afAuth.auth .signInWithPopup(new firebase.auth.FacebookAuthProvider()) .then(res => console.log(res));
+this.loggedin=true;
+}
+signInWithgoogle() {
+  this.afAuth.auth .signInWithPopup(new firebase.auth.GoogleAuthProvider()) .then(res => console.log(res));
+  this.loggedin=true;
+
+}
+regUser(component) {
+  this.navCtrl.setRoot(component);
+}
+
+
+
+
+
+
+goBk(){
+
+  this.navCtrl.setRoot(LandingPageComponent);
+this.navCtrl.popToRoot();
+}
+
+scan(){
+
+  this.option = {
+
+    prompt: "Please scan your code"
+  }
+  this.barcodeScanner.scan(this.option).then((barcodeData) => {
+    // Success! Barcode data is here
+    console.log(barcodeData);
+    this.data = barcodeData;
+this.navCtrl.push(LandingPageComponent);
+this.loggedin=true;
+
+
+   }, (err) => {
+       // An error occurred
+       console.log(err);
+   });
+
+}
+
+
+encodeData(){
+this.barcodeScanner.encode(this.barcodeScanner.Encode.TEXT_TYPE,this.encodemyData).then((res)=>{
+console.log(res)
+this.encodedData = res;
+}, (err) => {
+// An error occurred
+console.log(err);
+})
+}
+openPagee(component) {
+  console.log(component)
+  this.navCtrl.setRoot(component);
+}
+}
+

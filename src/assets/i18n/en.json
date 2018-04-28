@@ -19,6 +19,7 @@
     "PASSWORD": "Password",
     "LOGIN": "Login",
     "SKIP": "Skip",
+    "SIGN IN": "SIGN IN",
     "FORGET_PASSWORD": "Forget Password"
   },
   "FORGET_PASSWORD": {
