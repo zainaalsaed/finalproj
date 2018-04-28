@@ -7,12 +7,17 @@
     "USER_WEBSITE":"I'm already a user."
   },
   "REGISTRATION": {
+    "TITLE":"Create an Account",
     "USERNAME": "Username",
     "EMAIL": "Email",
     "PASSWORD": "Password",
     "CONFIRM_PASSWORD": "Confirm Password",
     "CREATE_ACCOUNT": "Create Account",
-    "SKIP": "Skip"
+    "SKIP": "Skip",
+    "STATUSN":"I don't have a driving lisence",
+    "STATUSY":"I have a drivimg lisence",
+    "BARCODE":"Scan your Barcode",
+    "IDNUM":"Enter your ID Number"
   },
   "LOGIN": {
     "EMAIL": "Email",
