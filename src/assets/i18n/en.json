@@ -3,7 +3,8 @@
   "LANDING_PAGE": {
     "REGISTRATION": "Registration",
     "LOGIN": "Login",
-    "SKIP": "Skip"
+    "SKIP": "Continue as a guest.",
+    "USER_WEBSITE":"I'm already a user."
   },
   "REGISTRATION": {
     "USERNAME": "Username",
@@ -127,6 +128,9 @@
     "ABOUTUS": "About Us",
     "CONTACTUS": "Contact Us"
   },
+
+
+
   "MENU_ITEMS": {
     "PROFILE": "Profile",
     "CALENDAR": "Calendar",
