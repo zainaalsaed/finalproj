@@ -37,17 +37,17 @@
   },
   "PROFILE": {
     "TITLE": "Profile",
-    "NAME": "Afroza Yasmin",
-    "DESIGNATION": "Software Engineer",
-    "DETAILS": "I am detail-oriented software developer with experience leading and working in teams on complex projects using a wide range of technologies such as NodeJs, AngularJs,C#, JavaScript etc. Always I try to give my best to work in a challenging environment using all my skills and efforts to explore in different fields and seek an opportunity for continuous learning.",
-    "TIMELINE": "Timeline",
-    "ABOUTME": "About Me",
-    "FRIENDS": "Friends",
-    "GALLERY": "Gallery",
+    "NAME": "Zaina Al-Saed",
+    "DESIGNATION": "Driving Lisence no. 803539",
+    "DETAILS": "Hello Mrs. Zaina, your driving lisence expiration date is 15/09/2021 ",
+    "TIMELINE": "Notifications",
+    "ABOUTME": "My information",
+    "FRIENDS": "My messages",
+    "GALLERY": "Enquiries",
     "ABOUTME_TAB": {
       "BASIC_INFOS": "Basic Infos",
-      "CONTACT_INFOS": "Contact Infos",
-      "CHECK_INS": "Check-Ins"
+      "CONTACT_INFOS": "Contact Info",
+      "CHECK_INS": "Violations"
     }
   },
   "CALENDAR": {

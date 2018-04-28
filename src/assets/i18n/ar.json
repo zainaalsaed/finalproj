@@ -43,11 +43,12 @@
     "TIMELINE": "الاشعارات",
     "ABOUTME": "معلوماتي",
     "FRIENDS": "رسائلي",
-    "GALLERY": "تبليغاتك",
+    "GALLERY": "طلباتك",
     "ABOUTME_TAB": {
       "BASIC_INFOS": "معلوماتك الاساسية",
       "CONTACT_INFOS": "معلومات الاتصال بك",
       "CHECK_INS": "مخالفاتك"
+
     }
   },
   "CALENDAR": {

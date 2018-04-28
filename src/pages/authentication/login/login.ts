@@ -14,6 +14,7 @@ import { ViewChild   } from '@angular/core';
 import { LandingPageComponent } from '../landing-page/landing-page';
 import { RegistrationComponent } from '../registration/registration';
 import { NewsFeedComponent } from '../../newsfeed/newsfeed';
+import { ProfileComponent } from '../../profile/profile';
 
 @IonicPage()
 @Component({
@@ -21,7 +22,7 @@ import { NewsFeedComponent } from '../../newsfeed/newsfeed';
   templateUrl: 'login.html'
 })
 export class LoginComponent {
-  barcodeScanner: any;
+  
   loggedin= false;
   data={ };
   encodemyData:string;
@@ -32,7 +33,7 @@ encodedData:{};
   @ViewChild('username') user;
 	@ViewChild('password') password;
   constructor(public navCtrl: NavController,
-     
+    public barcodeScanner:BarcodeScanner,
      private afAuth: AngularFireAuth,
      private alertCtrl: AlertController,
      private fire: AngularFireAuth,
@@ -141,7 +142,7 @@ goBk(){
 this.navCtrl.popToRoot();
 }
 
-scan(){
+scan(component){
 
   this.option = {
 
@@ -151,7 +152,7 @@ scan(){
     // Success! Barcode data is here
     console.log(barcodeData);
     this.data = barcodeData;
-this.navCtrl.push(LandingPageComponent);
+this.navCtrl.setRoot(component);
 this.loggedin=true;
 
 

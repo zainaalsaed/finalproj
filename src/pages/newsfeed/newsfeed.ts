@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IonicPage } from 'ionic-angular';
 // Timeline Model
+import { NavController, ToastController, IonicPage, MenuController } from 'ionic-angular';
+
 import { TimelineModel } from '../profile/timeline/timeline.model';
 // Timeline Service
 import { TimelineService } from '../profile/timeline/timeline.service';
@@ -13,7 +14,9 @@ import { TimelineService } from '../profile/timeline/timeline.service';
 })
 export class NewsFeedComponent implements OnInit {
   allPosts: TimelineModel[]; // Define timeline model
-  constructor(private newsFeedService: TimelineService) {}
+  constructor( public navCtrl: NavController,
+    public toastCtrl: ToastController,
+    public menu: MenuController , private newsFeedService: TimelineService) {}
   ngOnInit() {
     /** Loaded profile timeline data */
     this.allPosts = this.newsFeedService.getAllPosts();

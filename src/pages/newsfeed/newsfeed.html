@@ -1,11 +1,16 @@
 <ion-header no-border>
-    <ion-navbar color="white" hideBackButton>
-        <button ion-button menuToggle color="color1">
-            <ion-icon name="menu"></ion-icon>
-        </button>
-        <ion-title>NewsFeed</ion-title>
-    </ion-navbar>
-</ion-header>
+        <ion-navbar color="white" hideBackButton>
+            <button ion-button menuToggle color="color1">
+                <ion-icon name="menu"></ion-icon>
+            </button>
+            <ion-title>News Feed</ion-title>
+            <ion-buttons end>
+                <button ion-button icon-only color="color1" (click)="gotoSearchnews()">
+                    <ion-icon name="search"></ion-icon>
+                </button>
+            </ion-buttons>
+        </ion-navbar>
+    </ion-header>
 
 <ion-content id="newsfeed-v1">
 
