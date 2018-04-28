@@ -193,7 +193,9 @@ this.encodedDatay = res;
   console.log(err);
 })
   }
-
+  skipping() {
+    this.navCtrl.setRoot('LandingPageComponent');
+  }
 }
 
 
@@ -213,7 +215,6 @@ this.encodedDatay = res;
    * Skip function
    * This function will take user to landing page
   */
- /* skip() {
-    this.navCtrl.setRoot('LandingPageComponent');
-  }*/
+  
+
 

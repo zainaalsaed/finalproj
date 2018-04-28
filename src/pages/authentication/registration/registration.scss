@@ -1,7 +1,11 @@
 #registration-v1 {
+    .khara{
+
+        width: 100%;
+    }
     /* Background Style */
     height: 100%;
-    background: linear-gradient(-60deg, $themeColor1);
+    background:  url("../assets/img/tt.jpg") no-repeat;
     background-size: cover;
     /* Logo Style */
     .logo {
@@ -14,6 +18,7 @@
             border-radius: 50%;
         }
     }
+
     /* main body part style */
     .main-body {
         form {

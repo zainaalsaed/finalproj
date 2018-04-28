@@ -17,6 +17,7 @@
     "STATUSN":"I don't have a driving lisence",
     "STATUSY":"I have a drivimg lisence",
     "BARCODE":"Scan your Barcode",
+    "BARCODEDN":"Your scanned barcode:",
     "IDNUM":"Enter your ID Number"
   },
   "LOGIN": {

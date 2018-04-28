@@ -5,7 +5,7 @@
 
   <!-- Logo -->
   <div class="logo animated fadeInDown">
-    <img src="assets/img/tt.jpg">
+    <img src="assets/img/mot.png">
     <h2>{{'REGISTRATION.TITLE' | translate}} </h2>
   </div>
 
@@ -24,7 +24,7 @@
         </ion-item>
         <ion-item >
             <ion-label >  </ion-label>
-            <ion-input type="number" [(ngModel)]="identifierNum" type="number" placeholder="{{'REGISTRATION.IDNUM' | translate}}"></ion-input>
+            <ion-input type="number" name="id" [(ngModel)]="identifierNum" type="number" placeholder="{{'REGISTRATION.IDNUM' | translate}}"></ion-input>
           </ion-item>
         <!-- Email -->
         <ion-item>
@@ -52,18 +52,12 @@
           <ion-input class="ion-ios-locked-outline" type="password" placeholder="{{'REGISTRATION.CONFIRM_PASSWORD' | translate}}" [(ngModel)]="confirmPassword"
             name="confirmPassword"></ion-input>
         </ion-item>
-        <ion-item color="primary"><h1>
-    
-            {{'REGISTRATION.BARCODE' | translate}} : {{datay.text}}
-          
-      </h1> 
-      </ion-item>
-      <ion-card class="full-width" no-margin margin-bottom>
-          <ion-card-content no-padding>
+        
+      
       
             <ion-item>
               <ion-label class="text-1x bold" color="primary">Status?</ion-label>
-              <ion-select [(ngModel)]="status" (ionChange)="getStatus(status)">
+              <ion-select name="status" [(ngModel)]="status" (ionChange)="getStatus(status)">
               <ion-option [value]="yes"> {{'REGISTRATION.STATUSY' | translate}}</ion-option>
               <ion-option [value]="no"> {{'REGISTRATION.STATUSN' | translate}}</ion-option>
              
@@ -71,19 +65,26 @@
             </ion-select>
             </ion-item>
       
-          </ion-card-content>
-        </ion-card>
+          
 
 
 
 
         <!-- Buttons -->
         <div class="buttons animated fadeInUp">
-          
-            <button ion-button color="dark" tappable (click)="scany(); goLogy()" >
+          <div color="primary" class="khara" >
+            <button ion-button color="dark" tappable (click)="scany(); " >
                 <ion-icon name="barcode"></ion-icon>
-                {{'REGISTRATION.BARCODE | translate}}
+                {{'REGISTRATION.BARCODE' | translate}}
               </button>
+            </div>
+              <ion-item color="primary">
+                  <h3>
+            
+                    {{'REGISTRATION.BARCODEDN' | translate}} : {{datay.text}}
+                  
+              </h3> 
+              </ion-item>
           <button ion-button type="button" color="dark" block tappable (click)="newUser(); createPerson(name,identifierNum,mail,pas,status,datay.text,'NewsFeedComponent')">
             {{'REGISTRATION.CREATE_ACCOUNT' | translate}}
           </button>
@@ -93,7 +94,7 @@
     </form>
 
     <!-- Skip button-->
-    <button ion-button type="button" color="white" block clear (click)="skip()">
+    <button ion-button type="button" color="white" block clear (click)="skipping()">
       {{'REGISTRATION.SKIP' | translate}}
     </button>
   </div>
