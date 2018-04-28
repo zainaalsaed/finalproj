@@ -5,19 +5,21 @@
   <div class="background">
     <!-- Logo -->
     <div class="logo animated fadeInDown">
-      <img src="assets/imgs/logo.png">
-      <h2>IonicBucket</h2>
+      <img src="assets/img/mot.png">
+      <h2>Welcome to MOT App!</h2>
     </div>
 
     <!-- All Buttons -->
     <div class="animated fadeInUp" padding>
-      <button ion-button color="white" full round (tap)="openPage('RegistrationComponent')">
+      <!-- <button ion-button color="white" full round (tap)="openPage('RegistrationComponent')">
            {{'LANDING_PAGE.REGISTRATION' | translate}}
-        </button>
+        </button> -->
       <button ion-button color="white" full round (tap)="openPage('LoginComponent')">
-           {{'LANDING_PAGE.LOGIN' | translate}}
+        <ion-icon name="log-in"></ion-icon> 
+        {{'LANDING_PAGE.USER_WEBSITE' | translate}}
         </button>
       <button ion-button color="white" full round (tap)="openPage('ProfileComponent')">
+          <ion-icon name="walk"></ion-icon>
            {{'LANDING_PAGE.SKIP' | translate}}
         </button>
 

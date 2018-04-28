@@ -3,7 +3,8 @@
   "LANDING_PAGE": {
     "REGISTRATION": "التسجيل",
     "LOGIN": "تسجيل الدخول",
-    "SKIP": "تخطى"
+    "SKIP": "الدخول كزائر",
+    "USER_WEBSITE":"الدخول كمستخدم"
   },
   "REGISTRATION": {
     "USERNAME": "اسم المستخدم",
