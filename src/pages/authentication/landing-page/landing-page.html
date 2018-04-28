@@ -8,7 +8,18 @@
       <img src="assets/img/mot.png">
       <h2>Welcome to MOT App!</h2>
     </div>
-
+  
+  
+<div class="animated fadeInUp" padding color="white">
+  <ion-segment [(ngModel)]="robots">
+    <ion-segment-button value="arabi" (tap)="changeLanguage('ar')">
+        Arabic
+    </ion-segment-button>
+    <ion-segment-button value="engleze" (tap)="changeLanguage('en')">
+        English
+    </ion-segment-button>
+</ion-segment>
+</div>
     <!-- All Buttons -->
     <div class="animated fadeInUp" padding>
       <!-- <button ion-button color="white" full round (tap)="openPage('RegistrationComponent')">
@@ -22,7 +33,6 @@
           <ion-icon name="walk"></ion-icon>
            {{'LANDING_PAGE.SKIP' | translate}}
         </button>
-
+      </div>
     </div>
-  </div>
 </ion-content>
