@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Ionic 2 Starter App</title>
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/custom.css">
+        <!-- Custom Fonts -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div id="wrapper" data-spy="scroll" data-target="#spy" class="">
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper" class="">
+                <nav id="spy">
+                    <ul class="sidebar-nav nav">
+                        <li class="sidebar-brand active"><a href="#overview">Overview</a></li>
+                        <li><a href="#demo" data-scroll="" class="">Demo</a></li>
+                        <li><a href="#platform_support" data-scroll="" class="">Platform Support</a></li>
+                        <li><a href="#screens" data-scroll="" class="">Screens</a></li>
+                        <li><a href="#features" data-scroll="" class="">Features</a></li>
+                        <li><a href="#authentication" data-scroll="" class="">Authentication</a></li>
+                        <li><a href="#sidemenu" data-scroll="" class="">Side Menu</a></li>
+                        <li><a href="#profile" data-scroll="" class="">Profile Pages</a></li>
+                        <li><a href="#calendar" data-scroll="" class="">Calendar</a></li>
+                        <li><a href="#map" data-scroll="" class="">Google Map</a></li>
+                        <li><a href="#chart" data-scroll="" class="">Chart</a></li>
+                        <li><a href="#ecommerce" data-scroll="" class="">Ecommerce</a></li>
+                        <li><a href="#chat" data-scroll="" class="">Chat</a></li>
+                        <li><a href="#internationalization" data-scroll="" class="">Internationalization (i18n)</a></li>
+                        <li><a href="#rtlsupport" data-scroll="" class="">RTL Support</a></li>
+                        <li><a href="#theming" data-scroll="" class="">Theming</a></li>
+                        <li><a href="#folder_structure">Project Folder Structure</a></li>
+                        <li><a href="#icons">Icons</a></li>
+                        <li><a href="#installation">Installation</a></li>
+                        <li><a href="#run">Run</a></li>
+                        <li><a href="#build">Build</a></li>
+                        <li><a href="#testing">Testing app</a></li>
+                        <li><a href="#iconsplash">Icon and splash</a></li>
+                        <li><a href="#technologies">Technologies</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Page content -->
+            <div id="page-content-wrapper" class="">
+                <div class="content-header">
+                    <h1 id="home" class="">
+                    <a id="menu-toggle" href="#" class="glyphicon glyphicon-align-justify btn-menu toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </a>
+                    <img width="100px" src="https://s3-us-west-2.amazonaws.com/fulcrumy-ionic2/logo.png">
+                </h1>
+                </div>
+                <div class="page-content inset">
+                    <div class="row">
+                        <div class="jumbotron text-center">
+                            <h1 class="">Fulcrumy</h1>
+                            <h3 class="">Ionic 2 Starter Full App Supports Multiple Language i18n</p>
+                            <a class="btn btn-info" href="https://twitter.com/ionicbucket" target="_blank">Tweet Me!</a>
+                        </h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 well">
+                            <legend id="overview">Ionic 2 Starter Full App Supports Multiple Language i18n</legend>
+                            <br>
+                            <p>This application template build in using Ionic 2 Framework with applied i18n that is support multiple language. Now four languages applied in this app, languages are- default English, Spanish, Chinese, Arabic(RTL Support). Build In multiple theme concepts like Social media, Ecommerce, Business Logic, Map etc. Full application organised very simple design concepts with proper project structure, best practices. We applied latest version of Ionic 2, Angular 2, Typescript with i18n.
+                            </p>
+                            <hr class="col-md-12">
+                            <section>
+                                <span>Created: 21/02/2017</span>
+                                <br>
+                                <span>By: Afroza Yasmin</span>
+                                <br>
+                                <span>Email: ionicbucket@gmail.com</span>
+                                <br>
+                                <br>
+                                <p>Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="https://codecanyon.net/user/afroza021">here</a>. Thanks so much!</p>
+                            </section>
+                        </div>
+                        <div class="col-md-12 well">
+                            <legend id="demo">Demo</legend>
+
+                            <h2>Youtube</h2>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/bksZ0Bw7-bM" frameborder="0" allowfullscreen></iframe>
+                            <br>
+                            <h2>Ionic Viewer</h2>
+                            <p>
+                                Preview this application on IOS and Android using Ionic View. Please download this Ionic View application from - <a href="http://view.ionic.io/">Ionic Viewer</a>. Use the app ID - <b>a3a6e8a9</b>
+                            </p>
+                            <br>
+                            <h2>Android APK file</h2>
+                            <a href="https://drive.google.com/file/d/0Bz8pQ_7jvY7iLWFmNF8wclhZMXM/view?usp=sharing" target="_blank">APK File</a>
+                        </div>
+                        <div class="col-md-12 well">
+                            <legend id="platform_support" class="">Platform Support</legend>
+                            <p>This app support all the platform - Android, IOS, Windows</p>
+                        </div>
+                        <div class="col-md-12 well">
+                            <legend id="screens">Screens</legend>
+                            <ol>
+                                <li>Landing Page</li>
+                                <li>Login Page</li>
+                                <li>Signup Page</li>
+                                <li>Forget Password</li>
+                                <li>Profile Page</li>
+                                <li>Calendar</li>
+                                <li>Location Google Map</li>
+                                <li>Chart</li>
+                                <li>Ecommerce</li>
+                                <li>Latest News</li>
+                                <li>Chat</li>
+                                <li>Components</li>
+                                <li>About Us</li>
+                                <li>Contact Us</li>
+                                <li>Settings</li>
+                                <li>Search</li>
+                                <li>Logout</li>
+                            </ol>
+                        </div>
+                        <div class="col-md-12 well">
+                            <legend id="features">Features</legend>
+                            <br>
+                            <br>
+                            <ol>
+                                <li>Technologies- Ionic 2 + Angular 2 + Typescript</li>
+                                <li>Latest release of Ionic 2 and Angular 2 version</li>
+                                <li>Animated design that is clear and meaningfull</li>
+                                <li>37 components</li>
+                                <li>Support multiple language I18n. Implemented by Ionic 2 - <a target="_blank" href="https://ionicframework.com/docs/v2/resources/ng2-translate/">translator</a> developed from Angular 2 (ng2-translate ).</li>
+                                <li>RTL Support</li>
+                                <li>Full authentication of Landing, Login and Registration page.</li>
+                                <li>Side menu support with Icon and company logo</li>
+                                <li>User Profile included with social options - Timeline, About Me, Friends, and Gallery tabs</li>
+                                <li>Calendar component implementation of Angular 2 <a target="_blank" href="https://www.npmjs.com/package/angular2-fullcalendar">full calendar</a></li>
+                                <li>Google map components added multiple view options detect current location</li>
+                                <li>Chart components added multiple chart and implemented by <a target="_blank" href="http://valor-software.com/ng2-charts/">Chart.Js</a></li>
+                                <li>Ecommerce Module( Category wise product list and cart options)</li>
+                                <li>Latest news component slided support</li>
+                                <li>Chat module</li>
+                                <li>Awesome components page design</li>
+                                <li>About us and contact us components</li>
+                                <li>Language change options added into the Settings component </li>
+                                <li>Search and logout</li>
+                                <li>Very easy to customize</li>
+                                <li>Generated icons and splash screens</li>
+                                <li>Support full page Image viewer of any image. Implemented from - <a target="_blank" href="https://www.npmjs.com/package/ionic-img-viewer">Image Viewer</a></li>
+                            </ol>
+                        </div>
+                        <div class="col-md-12 well">
+                            <legend id="authentication">Authentication</legend>
+                            <p>
+                                The landing page contains three option naming registration, login and skip. You can create an account by clicking on registration button which will take you to the registration page and by providing username, email, password and reconfirming password you can create the account. For entering into your profile you need to click on Login button. At login page, you need to provide registered email and password. If you forget your password anytime then there have option to retrieve your password by clicking on Forget Password which will create a pop up box for entering your email.
+                            </p>
+                            <br>
+                            <div class="authentication-img">
+                                <h3>Preview Samples</h3>
+                                <img src="images/authentication.jpg" alt="Authentication">
+                            </div>
+                        </div>
+                        <div class="col-md-12 well">
+                            <legend id="sidemenu">Side Menu</legend>
+                            <p>By default, side menus are hidden underneath their side menu content and can be opened by swiping the content left or right or by toggling a button to show the side menu.</p>
+                            <br>
+                            <div class="sidemenu-img">
+                                <h3>Preview Samples</h3>
+                                <img src="images/sidebar.jpg" alt="Side Menu">
+                            </div>
+                        </div>
+                        <div class="col-md-12 well">
+                            <legend id="profile">Profile Pages</legend>
+                            <p>The screenshots showing the profile pages view below. Through login one can enter into the profile page which is mixed with a number of interesting options. The header of the page contains serach option and advance menu. There have two slider view at the beginning of the page,the first slide exhibit profile picture and designation and second slide describe profile holder description. Immediate below of this there have timeline, about me, friends and gallery buttons. Timeline will show friends activities where you can give like and put your comments. About me section contains basic information, contact information and check ins. By clicking on friends button you can view your friends and can message them also. The profile gallery shows your uploaded photos and bigger photos displayed if you click on each photo. In every page of your selection there have a round size button at below right side corner and by clicking on the button you will found sharing option to social sites like Facebook, Twitter, Google plus etc.
+                            </p>
+                            <br>
+                            <div class="profile-img">
+                                <h3>Preview Samples</h3>
+                                <img src="images/profile1.jpg" alt="Profile">
+                                <img src="images/profile2.jpg" alt="Profile">
+                            </div>
+                        </div>
+                        <div class="col-md-12 well">
+                            <legend id="calendar">Calendar</legend>
+                            <p>The calendar is an amazing option to see any kind of events, remind friends birthday, schedule meeting and so on. </p>
+                            <div class="calendar-img">
+                                <h3>Preview Samples</h3>
+                                <img src="images/calendar.jpg" alt="Calendar">
+                            </div>
+                        </div>
+                        <div class="col-md-12 well">
+                            <legend id="map">Google Map</legend>
+                            <p>The google map can help you to see your destined location with five types of google view naming Standard Map, Silver Map, Night Map, Dark Map and Aubergine Map. When you will enter into the map that will detect your current location automatically. </p>
+                            <div class="map-img">
+                                <h3>Preview Samples</h3>
+                                <img src="images/map.jpg" alt="Map">
+                            </div>
+                        </div>
+                        <div class="col-md-12 well">
+                            <legend id="chart">Chart</legend>
+                            <p>The chart have six chart options naming Dynamic chart, Bar chart, Doughnut chart, Pie chart, Polar chart and Radar chart. Chart.js has been applied for describing every charts. </p>
+                            <div class="chart-img">
+                                <h3>Preview Samples</h3>
+                                <img src="images/chart.jpg" alt="Chart">
+                            </div>
+                        </div>
+                        <div class="col-md-12 well">
+                            <legend id="ecommerce">Ecommerce</legend>
+                            <br>
+                            <br>
+                            <p>The Ecommerce site is very interesting and easy to browse. There have eight categories for browse in the site are Women, Men, Electronics, Home & Garden, Fashion, Toys & Baby, Book and Latest. Each categories are functionable. By entering into women category you can see this category product advertisement. If you select any product seller to see his/her product then you will see his/her product details, price, add to cart and related product suggestions. There also have quantity selection option for purchase the product. The cart symbol of the page right side corner of header shows how many products you have putted on your cart. By clicking on the button you can keep or discard your product selections. </p>
+                            <div class="ecommerce-img">
+                                <h3>Preview Samples</h3>
+                                <img src="images/ecommerce.jpg" alt="Ecommerce">
+                            </div>
+                        </div>
+                        <div class="col-md-12 well">
+                            <legend id="chat">Chat</legend>
+                            <p>
+                                The chat option allow you to chat with your friends who are in your contact list. By entering in contacts you can choose to whom you want to contact and by entering in to chat you can see messages and also can start to send message to your friends.
+                            </p>
+                            <div class="chat-img">
+                                <h3>Preview Samples</h3>
+                                <img src="images/chat.jpg" alt="Map">
+                            </div>
+                        </div>
+                        <div class="col-md-12 well">
+                            <legend id="internationalization">Internationalization (i18n)</legend>
+                            <p>This app support multiple language options that means internationalization can provide multiple language support of this application. This app suggests and applied best practice for internationalization. Initially we applied and used four(4) internationalization language for multiple language option. By default English(en) and others languages are - Spanish(es), Chinese(zh), Arabic(ar). Now stored all the json files assets folder assets/i18n.</p>
+                            <br>
+                            <h4><b>JSON File Structure:</b></h4>
+                            <img src="images/json-file.png" alt="Json file">
+                            <p>For multiple language support we used ng2-translate package.</p>
+                            <br>
+                            <h4><b>Apply in Plain Html Text Page:</b></h4>
+                            <img src="images/ng2-translate-apply.png" alt="Json file">
+                            <h4><b>Preview Samples</b></h4>
+                            <img src="images/language.jpg" alt="preview">
+                            <!-- Installing -->
+                            <h4><b>Installing</b></h4>
+                            <p>To install NG2-Translate run <b>npm install ng2-translate --save</b>.</p>
+                            <h3>Set up:</h3>
+                            <h4><b>Bootstrapping</b></h4>
+                            <p>To use NG2-Translate, it must first be imported and added to the imports array in the NgModule of the application. </p>
+                            <!-- Import translate into ngModule -->
+                            <h3>Import translate into ngModule</h3>
+                            <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                                <pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">import</span> { TranslateModule } from <span style="background-color: #fff0f0">&#39;ng2-translate/ng2-translate&#39;</span>;
+
+    <span style="color: #FF0000; background-color: #FFAAAA">@</span>NgModule({
+    imports<span style="color: #333333">:</span> [
+        TranslateModule.forRoot()
+    ]
+    })
+    </pre>
+                            </div>
+                            <p>Translation json files stored into the src/assets/i18n/ directory. </p>
+                            <p>We create a function in app.modules.ts that returns a new TranslateLoader.</p>
+                            <!-- HTML generated using hilite.me -->
+                            <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                                <pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">export</span> <span style="color: #008800; font-weight: bold">function</span> createTranslateLoader(http<span style="color: #333333">:</span> Http) {
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #008800; font-weight: bold">new</span> TranslateStaticLoader(http, <span style="background-color: #fff0f0">&#39;assets/i18n&#39;</span>, <span style="background-color: #fff0f0">&#39;.json&#39;</span>);
+    }
+    </pre>
+                            </div>
+                            <p>And then adding this function following the NgModules imports array:</p>
+                            <!-- HTML generated using hilite.me -->
+                            <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                                <pre style="margin: 0; line-height: 125%"><span style="color: #FF0000; background-color: #FFAAAA">@</span>NgModule({
+    imports<span style="color: #333333">:</span> [
+        TranslateModule.forRoot({
+        provide<span style="color: #333333">:</span> TranslateLoader,
+        useFactory<span style="color: #333333">:</span> (createTranslateLoader),
+        deps<span style="color: #333333">:</span> [Http]
+        })
+    ]
+    })
+    </pre>
+                            </div>
+                            <h4><b>Usage:</b></h4>
+                            <p>Once the above steps have been completed, we can begin to use NG2-Translate in any Ionic 2 app. The first step is to set up the translation assets. The translation assets are just json objects, as shown below:</p>
+                            <!-- HTML generated using hilite.me -->
+                            <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                                <pre style="margin: 0; line-height: 125%">en.json
+    {
+    <span style="background-color: #fff0f0">&quot;HELLO&quot;</span><span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;Hello&quot;</span>
+    }
+    es.json
+    {
+    <span style="background-color: #fff0f0">&quot;HELLO&quot;</span><span style="color: #333333">:</span> <span style="background-color: #fff0f0">&quot;hola&quot;</span>
+    }
+    </pre>
+                            </div>
+                            <p>Now we can translate Hello following format.</p>
+                            <!-- HTML generated using hilite.me -->
+                            <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                                <pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;ion</span><span style="color: #0000CC">-title</span><span style="color: #007700">&gt;</span>{{ &#39;HELLO&#39; | translate }}<span style="color: #FF0000; background-color: #FFAAAA">&lt;</span>/ion-title&gt;
+    </pre>
+                            </div>
+                            <p>Although we can use TranslateService for translate the current language the app is using and to translate JavaScript values in an application. To use the TranslateService in your app you must first import it and set the default language.</p>
+                            <h4><b>Import TranslateService</b></h4>
+                            <!-- HTML generated using hilite.me -->
+                            <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                                <pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">import</span> {TranslateService} from <span style="background-color: #fff0f0">&#39;ng2-translate&#39;</span>;
+    </pre>
+                            </div>
+                            <p><b>Set default language</b></p>
+                            <p><i>// this language will be used as a fallback when a translation isn't found in the current language</i></p>
+                            <!-- HTML generated using hilite.me -->
+                            <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                                <pre style="margin: 0; line-height: 125%">translate.setDefaultLang(<span style="background-color: #fff0f0">&#39;en&#39;</span>);
+    </pre>
+                            </div>
+                            <p>To change the language the app is currently using, there’s the use method of the TranslationService.</p>
+                            <!-- HTML generated using hilite.me -->
+                            <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                                <pre style="margin: 0; line-height: 125%">translateService.use(<span style="background-color: #fff0f0">&#39;en&#39;</span>);
+    </pre>
+                            </div>
+                            <h4>More Details - <a href="https://ionicframework.com/docs/v2/resources/ng2-translate/" target="_blank"><b>ng2-translate</b></a></h4>
+                        </div>
+                        <div class="col-md-12 well">
+                            <legend id="rtlsupport">RTL Support</legend>
+                            <p>This application fully works Right to left (RTL) support. Already we used one language option of Arabic for that case you select Arabic language option from the settings page then you can see this application all the contents or items will be work on right to left side. This is only possible for the Ionic framework that is RTL supported by default. We can use RTL option by adding this code <b>this.platform.setDir('rtl', true)</b> when platform ready to run.</p>
+                            <br>
+                            <p>Sample code example in app.component.ts</p>
+                            <!-- HTML generated using hilite.me -->
+                            <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                                <pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">this</span>.platform.ready().then(() <span style="color: #333333">=&gt;</span> {
+    <span style="color: #008800; font-weight: bold">this</span>.platform.setDir(<span style="background-color: #fff0f0">&#39;rtl&#39;</span>, <span style="color: #008800; font-weight: bold">true</span>) 
+    }
+    </pre>
+                            </div>
+                            <h4><b>Preview Samples</b></h4>
+                            <img src="images/rtl.jpg" width="80%" alt="">
+                        </div>
+                        <div class="col-md-12 well">
+                            <legend id="theming">Theming</legend>
+                            <p>Full application based on component based and every component uses its own SASS file. For that reason full app are well structured, flexible to manage. Easily override default SASS variables where possible (in app.variables.scss). app.variables.scss is used to modify the apps shared variables.</p>
+                            <img src="images/ionictheming.gif" width="80%" alt="">
+                            <h4>Theming your Ionic App</h4>
+                            <a href="http://ionicframework.com/docs/v2/theming/theming-your-app/">More Details</a>
+                            <h4>Sass Variables</h4>
+                            <a href="http://ionicframework.com/docs/v2/theming/sass-variables/">More Details</a>
+                        </div>
+                        <div class="col-md-12 well">
+                            <legend id="folder_structure">Project Folder Structure</legend>
+                            <p>Let's take a tour to see how the project has been structured before we start to talk about details of project. </p>
+                            <img src="images/project_structure.png" alt="">
+
+                            <h4><b>./src/index.html</b></h4>
+                            <p>
+                                <b>src/index.html</b> is the main entry point for the app, though its purpose is to set up script and CSS includes and bootstrap, or start running, our app.
+                            </p>
+                            <p>In this app, Ionic looks for the
+                                <b><span>&lt;ion</span><span>-app</span><span>&gt;</span></b> tag in your HTML. So, for that we include ionic tag
+                                <b><span>&lt;ion</span><span>-app</span><span>&gt;</span>  <span>&lt;/ion</span><span>-app</span><span>&gt;</span> </b> in index.html page.</p>
+                            <p>Also add some following script near in <b><span>&lt;ion</span><span>-app</span><span>&gt;</span></b> bottom tag.</p>
+
+                            <!-- HTML generated using hilite.me -->
+                            <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">&lt;!-- Google APIs --&gt;</span>
+
+    <span style="color: #007700">&lt;script </span><span style="color: #0000CC">type=</span><span style="background-color: #fff0f0">&quot;text/javascript&quot;</span> <span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;https://maps.googleapis.com/maps/api/js?key=AIzaSyBrvCNAuO0nWhvCQrKYc0CLAYtfZ9xHBrg&amp;libraries=places&quot;</span> <span style="color: #0000CC">async</span> <span style="color: #0000CC">defer</span><span style="color: #007700">&gt;&lt;/script&gt;</span>
+
+    <span style="color: #888888">&lt;!-- The polyfills js is generated during the build process --&gt;</span>
+    <span style="color: #007700">&lt;script </span><span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;build/polyfills.js&quot;</span><span style="color: #007700">&gt;&lt;/script&gt;</span>
+
+    <span style="color: #888888">&lt;!-- The bundle js is generated during the build process --&gt;</span>
+    <span style="color: #007700">&lt;script </span><span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;build/main.js&quot;</span><span style="color: #007700">&gt;&lt;/script&gt;</span>
+    </pre></div>
+
+                            <h4><b>./src/</b></h4>
+                            <p>
+                                Inside of the src directory we find our raw, uncompiled code. This is where most of the work for an Ionic 2 app will take place. When we run <b><i>ionic serve</i></b>, our code inside of <b>src/</b> is transpiled into the correct Javascript version that the browser understands (currently, ES5). That means we can work at a higher level using TypeScript, but compile down to the older form of Javascript the browser needs.
+                            </p>
+
+                            <h4><b>./app</b></h4>
+                            <p>Starting with folders, we can see that the bulk of our app lives here: pages, services, etc.</p>
+
+                            <h4><b>src/app/app.module.ts</b></h4>
+                            <p><b>src/app/app.module.ts</b> is the entry point for our app.</p>
+
+                            <p>Every app has a root module that essentially controls the rest of the application. This is also where we bootstrap our app using <b>ionicBootstrap</b>.</p>
+
+                            <p>In this module, we’re setting the root component to MyApp, in <b>src/app/app.component.ts</b>. This is the first component that gets loaded in our app, and typically it’s an empty shell for other components to be loaded into. In app.component.ts, we’re setting our template to <b>src/app/app.html</b>. Also this file contains all the components and module of this app.</p>
+
+                            <h4><b>./src/app/app.html</b></h4>
+                            <p>This html file contains main features of this app that represents side menu and content area. Set <b>ion-menu</b> to function as a side menu and then an <b>ion-nav</b> component to act as the main content area.</p>
+
+                            <h4><b>./platforms</b></h4>
+                            <p>Contains app platform targets like iOs or Android.</p>
+
+                            <h4><b>./www</b></h4>
+                            <p>This is where application index.html file lives. However, don’t be fooled into thinking this is where your app should live. Put all of your application scripts in the <b>./app</b> folder.</p>
+                            <h4><b>./www/index.html</b></h4>
+                            <p>This file update meta tags and add in any required scripts (cordova, polyfills, vendor build, app build, etc.).</p>
+                            <h4><b>./ionic.config.json</b></h4>
+                            <p>These file contains project-specific settings. Primarily it’s just the app name and id along with any proxies you may need for your app.</p>
+                            <h4><b>./package.json</b></h4>
+                            <p>If you are familiar with npm, you will recognize this immediately. If not, then this file describes your app’s production and development dependencies.</p>
+                            <h4><b>./webpack.config.js</b></h4>
+                            <p>(optional) If you are using webpack for builds then you certainly will need this for adjusting your webpack build settings. If you are not using webpack then, please move on… nothing to see here.</p>
+                            <h4><b>./gulpfile.js</b></h4>
+                            <p>Here you find hooks for modifying the Ionic gulp tasks. Use these to modify the Ionic build. There are a number of custom hooks you can take advantage of. You most likely will not need to modify this file.</p>
+                            <h4><b>More details - </b></h4>
+                            <a href="https://ionicframework.com/docs/v2/intro/tutorial/project-structure/">https://ionicframework.com/docs/v2/intro/tutorial/project-structure/</a>
+                            <br>
+                            <a href="http://moduscreate.com/ionic-2-project-structure/">http://moduscreate.com/ionic-2-project-structure/</a>
+                        </div>
+                        <div class="col-md-12 well">
+                            <legend id="icons">Icons:</legend>
+                            <a href="http://ionicframework.com/docs/v2/ionicons/">http://ionicframework.com/docs/v2/ionicons/</a>
+                        </div>
+                        <div class="col-md-12 well">
+                            <legend id="installation">Installation</legend>
+                            <br>
+                            <p><b>Prerequisite</b></p>
+                            <ul>
+                                <li>Install Node </li>
+                                <li>On OSX install <b>[home brew]</b>(http://brew.sh/) and type <i>`brew install node`</i> </li>
+                                <li>On Windows install <b>[chocolatey]</b>(https://chocolatey.org/) and type <i>`choco install nodejs`</i> </li>
+
+                            </ul>
+
+                            <br>
+                            <p>To create Ionic 2 projects, you’ll need to install the latest version of the CLI and Cordova. </p>
+
+                            <div><pre style="margin: 0; line-height: 125%">$ npm install <span style="color: #333333">-</span>g ionic cordova
+    </pre></div>
+
+                        </div>
+
+                        <div class="col-md-12 well">
+                            <legend id="run">Run</legend>
+                            <p>Clone the project and cd into the project directory. </p>
+                            <div><pre style="margin: 0; line-height: 125%">$ ionic serve
+    $ ionic serve <span style="color: #333333">--</span>lab
+    </pre></div>
+
+                        </div>
+
+                        <div class="col-md-12 well">
+                            <legend id="build">Build</legend>
+
+                            <br>
+                            <h2>Build for Android</h2>
+                            <h4><b>Requirements</b></h4>
+
+                            <br>
+
+                            <ul>
+                                <li>
+                                    Android Studio
+
+                                </li>
+                                <li>Updated Android SDK tools, platform and component dependencies. Available through Android Studio’s SDK Manager</li>
+                            </ul>
+
+                            <p><b>Add android platform with the CLI :</b></p>
+
+                            <div><pre style="margin: 0; line-height: 125%">$ ionic platform add android
+    $ ionic build android
+    </pre></div>
+
+                            <h2>Android Production Builds (release.apk)/Publishing your app</h2>
+
+                            <div><pre style="margin: 0; line-height: 125%">$ cordova plugin rm cordova<span style="color: #333333">-</span>plugin<span style="color: #333333">-</span>console
+    $ cordova build <span style="color: #333333">--</span>release android
+    $ keytool <span style="color: #333333">-</span>genkey <span style="color: #333333">-</span>v <span style="color: #333333">-</span>keystore my<span style="color: #333333">-</span>release<span style="color: #333333">-</span>key.keystore <span style="color: #333333">-</span>alias alias_name <span style="color: #333333">-</span>keyalg RSA <span style="color: #333333">-</span>keysize <span style="color: #0000DD; font-weight: bold">2048</span> <span style="color: #333333">-</span>validity <span style="color: #0000DD; font-weight: bold">10000</span>
+    $ jarsigner <span style="color: #333333">-</span>verbose <span style="color: #333333">-</span>sigalg SHA1withRSA <span style="color: #333333">-</span>digestalg SHA1 <span style="color: #333333">-</span>keystore my<span style="color: #333333">-</span>release<span style="color: #333333">-</span>key.keystore HelloWorld<span style="color: #333333">-</span>release<span style="color: #333333">-</span>unsigned.apk alias_name
+    $ zipalign <span style="color: #333333">-</span>v <span style="color: #0000DD; font-weight: bold">4</span> HelloWorld<span style="color: #333333">-</span>release<span style="color: #333333">-</span>unsigned.apk HelloWorld.apk
+    </pre></div>
+                            <br>
+                            <p><b>More Details</b></p>
+                            <a href="https://ionicframework.com/docs/guide/publishing.html">https://ionicframework.com/docs/guide/publishing.html</a>
+
+                            <h2>Building for iOS</h2>
+                            <p>You need the iOS SDK installed on your computer to build an iOS version of your application using the steps below.</p>
+
+                            <ol>
+                                <li>On the command line, make sure you are in the ionic-tutorial/conference directory</li>
+                                <li>Add support for the iOS platform</li>
+                                <li>ionic platform add ios</li>
+                                <li>This step is not required with recent versions of the Ionic CLI because the ios platform is installed by default</li>
+                                <li>Build the project</li>
+                                <li>ionic build ios</li>
+                                <li>Open conference.xcodeproj in the conference/platforms/ios directory</li>
+                                <li>In Xcode, run the application on a device connected to your computer or in the iOS emulator</li>
+                            </ol>
+                        </div>
+
+                        <div class="col-md-12 well">
+                            <legend id="testing">Testing your app</legend>
+
+                            <h4>Desktop browser testing</h4>
+                            <div><pre>$ ionic serve
+    </pre></div>
+
+                            <h4>Simulator testing</h4>
+                            <div><pre>$ ionic build ios
+    $ ionic emulate ios
+    </pre></div>
+
+                            <h4>Testing as a native app</h4>
+
+                            <div><pre>$ ionic run android</pre></div>
+                        </div>
+
+                        <div class="col-md-12 well">
+                            <legend id="iconsplash">Icon and splash screen generation</legend>
+
+                            <h3>Auto generate your icons and splash screens from 2 initial files with the CLI for iOS and Android.</h3>
+
+                            <p>Place two initial files in your project/resources directory</p>
+
+                            <ul>
+                                <li>icon.png</li>
+
+                                <li>splash.png</li>
+                            </ul>
+
+                            <p>Make sure the sizes are correct:</p>
+
+                            <ul>
+                                <li>icon.png: 192x192 px</li>
+
+                                <li>splash.png: 2208x2208 px</li>
+                            </ul>
+
+                            <p>Run the following command:</p>
+
+                            <div><pre style="margin: 0; line-height: 125%">$ ionic resources
+    $ ionic resources <span style="color: #333333">--</span>splash
+    $ ionic resources <span style="color: #333333">--</span>icon
+    </pre></div>
+
+                        </div>
+
+                        <div class="col-md-12 well">
+                            <legend id="technologies">Technologies</legend>
+                            <ol>
+                                <li>Angular 2</li>
+                                <li> Ionic 2</li>
+                                <li>Sass</li>
+                                <li> Typescript</li>
+                                <li>Ionic 2 with Typescript</li>
+                                <li>SCSS instead of CSS</li>
+                                <li>Automatic compilation</li>
+
+                            </ol>
+                        </div>
+
+                        <div class="col-md-12 well">
+                            <legend id="resources">Resources</legend>
+                            <a href="https://ionicframework.com/docs/v2/resources/ng2-translate/">https://ionicframework.com/docs/v2/resources/ng2-translate/</a>
+                            <br>
+                            <a href="https://www.npmjs.com/package/ionic-img-viewer">https://www.npmjs.com/package/ionic-img-viewer</a>
+                            <br>
+                            <a href="https://www.npmjs.com/package/angular2-fullcalendar">https://www.npmjs.com/package/angular2-fullcalendar</a>
+                            <br>
+                            <a href="http://valor-software.com/ng2-charts/">http://valor-software.com/ng2-charts/</a>
+                            <br>
+
+                        </div>
+                    </div>
+                    <div class="navbar navbar-default navbar-static-bottom">
+                        <p class="navbar-text pull-left">Built by <a href="#" target="_blank" class=""> Afroza Yasmin
+                        </a>
+                        </p>
+                        <a href="#" target="_blank" class="">
+                        </a>
+                    </div>
+                    <a href="#" target="_blank" class="">
+                    </a>
+                </div>
+                <a href="#" target="_blank" class="">
+                </a>
+            </div>
+            <a href="#" target="_blank" class="">
+            </a>
+        </div>
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/menu.js"></script>
+    </body>
+
+</html>
