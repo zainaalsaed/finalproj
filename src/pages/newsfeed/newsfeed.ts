@@ -12,6 +12,7 @@ import { TimelineService } from '../profile/timeline/timeline.service';
   templateUrl: 'newsfeed.html',
   providers: [TimelineService]
 })
+//zaina
 export class NewsFeedComponent implements OnInit {
   allPosts: TimelineModel[]; // Define timeline model
   constructor( public navCtrl: NavController,
