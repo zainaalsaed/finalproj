@@ -2,7 +2,7 @@
 <widget id="com.ionicbucket.multipurposetheme" version="4.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>IonicBucket</name>
     <description>An IonicBucket Multipurpose Theme</description>
-    <author email="ionicbucket@gmail.com" href="http://ionicbucket.com/">IonicBucket Team</author>
+    <author email="zainaimadsaed@gmail.com" href="http://ionicbucket.com/">Zaina Al-Saed & Nada Mahamdah </author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />

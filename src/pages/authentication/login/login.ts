@@ -128,7 +128,7 @@ signInWithgoogle() {
 
 }
 regUser(component) {
-  this.navCtrl.setRoot(component);
+  this.navCtrl.push(component);
 }
 
 
